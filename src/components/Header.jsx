@@ -1,28 +1,56 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import InstagramIcon from './InstagramIcon'
 import './Header.css'
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
+  // Close menu when route changes
+  const handleLinkClick = () => {
+    closeMenu()
+  }
+
   return (
     <header className="header">
       <div className="container">
         <nav className="nav">
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" onClick={handleLinkClick}>
             Aligned Heart
           </Link>
 
-          <ul className="nav-links">
+          <button
+            className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+          >
+            <span className="menu-bar"></span>
+            <span className="menu-bar"></span>
+            <span className="menu-bar"></span>
+          </button>
+
+          <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
             <li>
-              <Link to="/about" className="nav-link">Private Therapy</Link>
+              <Link to="/about" className="nav-link" onClick={handleLinkClick}>Private Therapy</Link>
             </li>
             <li>
-              <Link to="/services" className="nav-link">Services</Link>
+              <Link to="/services" className="nav-link" onClick={handleLinkClick}>Services</Link>
             </li>
             <li>
-              <Link to="/servicios" className="nav-link">Español</Link>
+              <Link to="/servicios" className="nav-link" onClick={handleLinkClick}>Español</Link>
             </li>
             <li>
-              <Link to="/new-client" className="nav-link">Contact</Link>
+              <Link to="/new-client" className="nav-link" onClick={handleLinkClick}>Contact</Link>
             </li>
             <li>
               <a href="https://www.instagram.com/terra_artist_love/" target="_blank" rel="noopener noreferrer" className="nav-link nav-icon">
@@ -30,6 +58,8 @@ function Header() {
               </a>
             </li>
           </ul>
+
+          {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
         </nav>
       </div>
     </header>
