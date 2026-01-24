@@ -5,14 +5,11 @@ function About() {
   return (
     <div className="about">
       <section className="section-minimal">
-        <div className="container-narrow">
+        <div className="container">
           <h1>About Terra</h1>
 
-          <div className="about-portrait">
-            <img src={gardenPortrait} alt="Terra" />
-          </div>
-
-          <div className="about-content">
+          <div className="about-layout">
+            <div className="about-content">
             <p>
               I am a licensed therapist partnering with individuals ready to move
               through anxiety, grief, depression, trauma, and relationship stress
@@ -35,6 +32,11 @@ function About() {
               self-awareness, co-create a personalized roadmap of practices and strategies,
               and guide clients toward a clearer, more regulated, and more insightful space.
             </p>
+            </div>
+
+            <div className="about-portrait">
+              <img src={gardenPortrait} alt="Terra" />
+            </div>
           </div>
         </div>
       </section>

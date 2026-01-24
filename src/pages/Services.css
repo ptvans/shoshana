@@ -1,0 +1,49 @@
+.services h1 {
+  margin-bottom: 3rem;
+}
+
+.rates-list {
+  margin-bottom: 2.5rem;
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.rate-item:first-child {
+  border-top: 1px solid var(--accent-color);
+}
+
+.rate-service {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.rate-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.rates-notes {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.rates-notes p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.rates-notes p:last-child {
+  margin-bottom: 0;
+}
+
+.services-cta {
+  margin-top: 2rem;
+}

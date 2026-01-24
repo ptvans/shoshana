@@ -1,3 +1,4 @@
+import InstagramIcon from './InstagramIcon'
 import './Footer.css'
 
 function Footer() {
@@ -7,11 +8,11 @@ function Footer() {
     <footer className="footer">
       <div className="container-narrow">
         <div className="footer-content">
-          <p className="footer-brand">Aligned Heart</p>
+          <p className="footer-brand">Private practice therapist</p>
           <p className="footer-links">
             <a href="https://youralignedheart.com">youralignedheart.com</a>
             <span className="separator">&middot;</span>
-            <a href="https://www.instagram.com/terra_artist_love/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.instagram.com/terra_artist_love/" target="_blank" rel="noopener noreferrer" className="footer-icon"><InstagramIcon size={20} /></a>
           </p>
           <p className="footer-copyright">
             &copy; {currentYear}

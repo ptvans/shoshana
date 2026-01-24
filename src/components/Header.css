@@ -47,6 +47,11 @@
   color: var(--primary-color);
 }
 
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .nav {
     height: 70px;

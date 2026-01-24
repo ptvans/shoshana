@@ -32,6 +32,12 @@
   color: var(--primary-color);
 }
 
+.footer-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
 .separator {
   margin: 0 0.75rem;
   color: var(--accent-color);

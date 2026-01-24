@@ -10,9 +10,10 @@ function Home() {
           <div className="hero-portrait">
             <img src={terraPortrait} alt="Terra" />
           </div>
+          <p className="hero-name">Terra Crowl, LCSW</p>
           <h1>Aligned Heart</h1>
           <p className="tagline">
-            Eliminating suffering through emotionally focused compassionate therapy
+            My goal is to eliminate the suffering of all human beings through emotionally focused compassionate therapy
           </p>
           <div className="hero-cta">
             <Link to="/about" className="link-subtle">Learn more about my approach</Link>
