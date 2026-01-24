@@ -42,8 +42,8 @@ function Home() {
       <section className="section-minimal section-cta">
         <div className="container-narrow">
           <p className="cta-text">Ready to take the first step?</p>
-          <Link to="/book-appointment" className="btn btn-primary">
-            Schedule a Session
+          <Link to="/new-client" className="btn btn-primary">
+            Get in Touch
           </Link>
         </div>
       </section>

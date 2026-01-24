@@ -15,10 +15,7 @@ function Header() {
               <Link to="/about" className="nav-link">About</Link>
             </li>
             <li>
-              <Link to="/book-appointment" className="nav-link">Book</Link>
-            </li>
-            <li>
-              <Link to="/new-client" className="nav-link">New Clients</Link>
+              <Link to="/new-client" className="nav-link">Contact</Link>
             </li>
           </ul>
         </nav>

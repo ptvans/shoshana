@@ -64,6 +64,7 @@
 
 .specialty-group {
   margin-bottom: 3rem;
+  text-align: left;
 }
 
 .specialty-group:last-child {

@@ -11,8 +11,6 @@ function NewClient() {
     age: '',
     concerns: '',
     previousTherapy: '',
-    insurance: '',
-    emergencyContact: '',
     howDidYouHear: '',
     additionalInfo: ''
   })
@@ -92,8 +90,6 @@ function NewClient() {
         age: '',
         concerns: '',
         previousTherapy: '',
-        insurance: '',
-        emergencyContact: '',
         howDidYouHear: '',
         additionalInfo: ''
       })
@@ -114,7 +110,7 @@ function NewClient() {
         <div className="page-header">
           <h1>New Client Request</h1>
           <p>
-            Thank you for considering therapy with Peaceful Mind Therapy. 
+            Thank you for considering therapy with Aligned Heart.
             Please complete this form to help us understand your needs better.
           </p>
         </div>
@@ -140,13 +136,6 @@ function NewClient() {
               </ol>
             </div>
 
-            <div className="info-card">
-              <h3>Insurance & Fees</h3>
-              <p>
-                We accept most major insurance plans. We'll verify your coverage
-                and discuss any out-of-pocket costs before your first session.
-              </p>
-            </div>
           </div>
 
           <div className="client-form-container">
@@ -290,40 +279,6 @@ function NewClient() {
                   <option value="past">Past therapy (not currently in therapy)</option>
                   <option value="current">Currently in therapy</option>
                 </select>
-              </div>
-
-              <h3 className="form-section-title">Insurance & Logistics</h3>
-
-              <div className="form-group">
-                <label htmlFor="insurance" className="form-label">
-                  Insurance Provider (Optional)
-                </label>
-                <input
-                  type="text"
-                  id="insurance"
-                  name="insurance"
-                  value={formData.insurance}
-                  onChange={handleChange}
-                  className="form-input"
-                  placeholder="e.g., Blue Cross Blue Shield, Aetna, Self-pay"
-                  disabled={isSubmitting}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="emergencyContact" className="form-label">
-                  Emergency Contact (Optional)
-                </label>
-                <input
-                  type="text"
-                  id="emergencyContact"
-                  name="emergencyContact"
-                  value={formData.emergencyContact}
-                  onChange={handleChange}
-                  className="form-input"
-                  placeholder="Name and phone number"
-                  disabled={isSubmitting}
-                />
               </div>
 
               <div className="form-group">
