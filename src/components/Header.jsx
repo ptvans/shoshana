@@ -7,19 +7,18 @@ function Header() {
       <div className="container">
         <nav className="nav">
           <Link to="/" className="logo">
-            <span className="logo-icon">🌿</span>
-            <span className="logo-text">Peaceful Mind Therapy</span>
+            Aligned Heart
           </Link>
-          
+
           <ul className="nav-links">
             <li>
-              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/about" className="nav-link">About</Link>
             </li>
             <li>
-              <Link to="/book-appointment" className="nav-link">Book Appointment</Link>
+              <Link to="/book-appointment" className="nav-link">Book</Link>
             </li>
             <li>
-              <Link to="/new-client" className="nav-link btn btn-primary">New Client</Link>
+              <Link to="/new-client" className="nav-link">New Clients</Link>
             </li>
           </ul>
         </nav>
@@ -29,4 +28,3 @@ function Header() {
 }
 
 export default Header
-

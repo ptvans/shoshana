@@ -1,0 +1,23 @@
+.about h1 {
+  margin-bottom: 3rem;
+}
+
+.about-portrait {
+  margin: 0 auto 3rem;
+  max-width: 400px;
+}
+
+.about-portrait img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}

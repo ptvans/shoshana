@@ -2,31 +2,20 @@ import './Footer.css'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
-  
+
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container-narrow">
         <div className="footer-content">
-          <div className="footer-section">
-            <h4>Peaceful Mind Therapy</h4>
-            <p>Compassionate, professional care for your mental wellness journey.</p>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Contact</h4>
-            <p>Email: info@peacefulmindtherapy.com</p>
-            <p>Phone: (555) 123-4567</p>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Hours</h4>
-            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-            <p>Saturday: 10:00 AM - 2:00 PM</p>
-          </div>
-        </div>
-        
-        <div className="footer-bottom">
-          <p>&copy; {currentYear} Peaceful Mind Therapy. All rights reserved.</p>
+          <p className="footer-brand">Aligned Heart</p>
+          <p className="footer-links">
+            <a href="https://youralignedheart.com">youralignedheart.com</a>
+            <span className="separator">&middot;</span>
+            <a href="https://www.instagram.com/terra_artist_love/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </p>
+          <p className="footer-copyright">
+            &copy; {currentYear}
+          </p>
         </div>
       </div>
     </footer>
@@ -34,4 +23,3 @@ function Footer() {
 }
 
 export default Footer
-
