@@ -33,6 +33,28 @@
   border-radius: 4px;
 }
 
+.section-alt {
+  background-color: var(--background-alt);
+}
+
+.about h2 {
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.who-content {
+  text-align: left;
+}
+
+.who-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.who-content p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .about-layout {
     flex-direction: column-reverse;
