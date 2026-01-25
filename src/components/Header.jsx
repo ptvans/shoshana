@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import InstagramIcon from './InstagramIcon'
+import logo from '../images/Logo-aligned-heart.png'
 import './Header.css'
 
 function Header() {
@@ -25,7 +26,7 @@ function Header() {
       <div className="container">
         <nav className="nav">
           <Link to="/" className="logo" onClick={handleLinkClick}>
-            Aligned Heart
+            <img src={logo} alt="Aligned Heart" className="logo-image" />
           </Link>
 
           <button

@@ -16,16 +16,15 @@
 }
 
 .logo {
-  font-size: 1.125rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: var(--primary-color);
+  display: flex;
+  align-items: center;
   text-decoration: none;
   z-index: 1002;
 }
 
-.logo:hover {
-  color: var(--primary-color);
+.logo-image {
+  height: 70px;
+  width: auto;
 }
 
 .nav-links {
@@ -97,8 +96,8 @@
     height: 70px;
   }
 
-  .logo {
-    font-size: 1rem;
+  .logo-image {
+    height: 60px;
   }
 
   .menu-toggle {

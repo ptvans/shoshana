@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import terraPortrait from '../photos/terra-portrait.jpg'
+import logo from '../images/Logo-aligned-heart-LG.png'
 import ContactForm from '../components/ContactForm'
 import './Home.css'
 
@@ -12,7 +13,7 @@ function Home() {
             <img src={terraPortrait} alt="Terra" />
           </div>
           <p className="hero-name">Terra Crowl, LCSW</p>
-          <h1>Aligned Heart</h1>
+          <img src={logo} alt="Aligned Heart" className="hero-logo" />
           <p className="tagline">
             Do you want your life and your relationship to be deeply aligned with your heart?
           </p>
@@ -42,7 +43,7 @@ function Home() {
       </section>
 
       <section className="section-minimal section-testimonials">
-        <div className="container-narrow">
+        <div className="container">
           <h2>Client Experiences</h2>
           <div className="testimonials-grid">
             <div className="testimonial">

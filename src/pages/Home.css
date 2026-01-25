@@ -18,18 +18,17 @@
 }
 
 .hero-name {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.hero-minimal h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.hero-logo {
+  height: 120px;
+  width: auto;
   margin-bottom: 1rem;
-  color: var(--primary-color);
 }
 
 .tagline {
@@ -141,8 +140,8 @@
     padding: 4rem 0 3rem;
   }
 
-  .hero-minimal h1 {
-    font-size: 2rem;
+  .hero-logo {
+    height: 90px;
   }
 
   .hero-portrait {

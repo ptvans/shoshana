@@ -11,7 +11,7 @@ function Services() {
           <div className="rates-list">
             <div className="rate-item">
               <span className="rate-service">Individual Sessions</span>
-              <span className="rate-price">$150</span>
+              <span className="rate-price">$180</span>
             </div>
             <div className="rate-item">
               <span className="rate-service">Couples Sessions</span>

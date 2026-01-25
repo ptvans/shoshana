@@ -8,11 +8,8 @@ function NewClient() {
     lastName: '',
     email: '',
     phone: '',
-    age: '',
     concerns: '',
-    previousTherapy: '',
-    howDidYouHear: '',
-    additionalInfo: ''
+    howDidYouHear: ''
   })
   
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -87,11 +84,8 @@ function NewClient() {
         lastName: '',
         email: '',
         phone: '',
-        age: '',
         concerns: '',
-        previousTherapy: '',
-        howDidYouHear: '',
-        additionalInfo: ''
+        howDidYouHear: ''
       })
       
     } catch (error) {
@@ -223,23 +217,6 @@ function NewClient() {
                     <span className="form-error">{errors.phone}</span>
                   )}
                 </div>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="age" className="form-label">
-                  Age (Optional)
-                </label>
-                <input
-                  type="number"
-                  id="age"
-                  name="age"
-                  value={formData.age}
-                  onChange={handleChange}
-                  className="form-input"
-                  min="18"
-                  max="120"
-                  disabled={isSubmitting}
-                />
               </div>
 
               <h3 className="form-section-title">Therapeutic Information</h3>
