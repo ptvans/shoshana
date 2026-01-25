@@ -1,0 +1,41 @@
+================================================================================
+                         ALIGNED HEART - PROGRESS TRACKER
+================================================================================
+
+Last Updated: 2026-01-25
+
+================================================================================
+COMPLETED
+================================================================================
+
+[x] Initial site creation and content
+[x] GitHub deployment setup
+[x] Services pages (English and Spanish)
+[x] About page modifications
+[x] Mobile-friendly hamburger menu navigation
+[x] Add simplified contact form to all pages (Home, About, Services, Servicios)
+    - Fields: name, email, phone, service type (individual/couples), comments
+    - Created reusable ContactForm component
+    - Added submitContactForm API function
+
+================================================================================
+IN PROGRESS
+================================================================================
+
+(none currently)
+
+================================================================================
+TODO / BACKLOG
+================================================================================
+
+- [ ] (Add tasks here as they come up)
+
+================================================================================
+NOTES
+================================================================================
+
+- Site is live at: www.youralignedheart.com
+- Demo mode is active (GoHighLevel API credentials not configured)
+- Main branch is the deployment branch
+
+================================================================================

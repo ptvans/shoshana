@@ -1,4 +1,5 @@
 import gardenPortrait from '../photos/garden-portrait.jpg'
+import ContactForm from '../components/ContactForm'
 import './About.css'
 
 function About() {
@@ -68,6 +69,12 @@ function About() {
               that their emotions are "too much." Both belong in my practice.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="section-minimal">
+        <div className="container">
+          <ContactForm />
         </div>
       </section>
     </div>

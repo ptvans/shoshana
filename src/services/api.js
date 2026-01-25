@@ -176,6 +176,76 @@ export const submitNewClientRequest = async (clientData) => {
 }
 
 /**
+ * Submit a simplified contact form to GoHighLevel
+ * @param {Object} contactData - The contact form data
+ * @returns {Promise} - The API response
+ */
+export const submitContactForm = async (contactData) => {
+  try {
+    // Check if API key is configured
+    if (!GHL_API_KEY || !GHL_LOCATION_ID) {
+      console.warn('GoHighLevel API credentials not configured. Running in demo mode.')
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({
+            data: {
+              success: true,
+              message: 'Contact form submitted (demo mode)',
+              contactId: `demo-${Date.now()}`,
+            }
+          })
+        }, 1000)
+      })
+    }
+
+    // Parse name into first and last
+    const nameParts = contactData.name.trim().split(' ')
+    const firstName = nameParts[0] || ''
+    const lastName = nameParts.slice(1).join(' ') || ''
+
+    // Create or update contact in GoHighLevel
+    const contactPayload = {
+      locationId: GHL_LOCATION_ID,
+      firstName: firstName,
+      lastName: lastName,
+      email: contactData.email,
+      phone: contactData.phone,
+      tags: ['website-contact', 'new-inquiry'],
+      customFields: {
+        serviceType: contactData.serviceType || '',
+        comments: contactData.comments || '',
+      }
+    }
+
+    const contactResponse = await api.post('/contacts', contactPayload)
+
+    // Add a note to the contact
+    if (contactResponse.data.contact?.id) {
+      await api.post(`/contacts/${contactResponse.data.contact.id}/notes`, {
+        body: `Website Contact Form:\n\nService Type: ${contactData.serviceType || 'Not specified'}\n\nComments: ${contactData.comments || 'None'}`,
+      })
+    }
+
+    return contactResponse
+
+  } catch (error) {
+    console.error('Error submitting contact form:', error)
+
+    if (error.response?.status === 401) {
+      console.warn('API authentication failed. Running in demo mode.')
+      return {
+        data: {
+          success: true,
+          message: 'Contact form submitted (demo mode - API not configured)',
+        }
+      }
+    }
+
+    throw error
+  }
+}
+
+/**
  * Calculate end time for appointment (adds 50 minutes)
  * @param {string} date - The appointment date
  * @param {string} time - The appointment time

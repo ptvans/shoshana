@@ -44,6 +44,56 @@
   margin-bottom: 0;
 }
 
+/* Policy sections */
+.policy-section {
+  text-align: left;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--accent-color);
+}
+
+.policy-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.policy-section p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.policy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.insurance-questions {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.insurance-questions li {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.insurance-questions li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.section-cta {
+  background-color: var(--background-alt);
+}
+
 .services-cta {
   margin-top: 2rem;
 }

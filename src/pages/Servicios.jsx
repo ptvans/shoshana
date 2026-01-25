@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ContactForm from '../components/ContactForm'
 import './Servicios.css'
 
 function Servicios() {
@@ -58,11 +58,12 @@ function Servicios() {
             </div>
           </div>
 
-          <div className="servicios-cta">
-            <Link to="/new-client" className="btn btn-primary">
-              Contáctame
-            </Link>
-          </div>
+        </div>
+      </section>
+
+      <section className="section-minimal">
+        <div className="container">
+          <ContactForm />
         </div>
       </section>
     </div>
