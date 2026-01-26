@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
-import Servicios from './pages/Servicios'
 import NewClient from './pages/NewClient'
 import './App.css'
 
@@ -18,7 +17,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/servicios" element={<Servicios />} />
             <Route path="/new-client" element={<NewClient />} />
           </Routes>
         </main>

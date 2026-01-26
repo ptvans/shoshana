@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,25 +7,38 @@
 }
 
 :root {
-  --primary-color: #6B9080;
-  --secondary-color: #A4C3B2;
-  --accent-color: #CCE3DE;
-  --text-primary: #2C3E50;
-  --text-secondary: #6B7C85;
-  --background: #FAFCFB;
-  --background-alt: #F0F5F3;
+  /* Warm cream/beige palette inspired by reference */
+  --primary-color: #B8977E;      /* Terracotta/tan */
+  --primary-dark: #9A7B62;       /* Darker terracotta */
+  --secondary-color: #D4C4B5;    /* Light tan */
+  --accent-color: #E8DFD6;       /* Very light beige */
+  --text-primary: #3D3D3D;       /* Dark gray */
+  --text-secondary: #6B6B6B;     /* Medium gray */
+  --text-light: #8B8B8B;         /* Light gray */
+  --background: #F7F3EF;         /* Warm cream */
+  --background-alt: #F0EAE3;     /* Slightly darker cream */
+  --background-card: #FAF8F5;    /* Card background */
   --white: #FFFFFF;
+  --border-color: #E0D6CC;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing */
+  --section-padding: 6rem;
+  --section-padding-mobile: 4rem;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 #root {
@@ -31,18 +46,21 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-weight: 500;
   line-height: 1.3;
   margin-bottom: 0.5em;
+  color: var(--text-primary);
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  font-weight: 400;
 }
 
 h3 {
@@ -60,7 +78,7 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-dark);
 }
 
 button {
@@ -76,6 +94,49 @@ input, textarea, select {
   font-size: 1rem;
 }
 
+/* Global button styles */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
 /* Utility classes */
 .container {
   max-width: 1200px;
@@ -83,17 +144,44 @@ input, textarea, select {
   padding: 0 2rem;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
+.section-minimal {
+  padding: var(--section-padding) 0;
+}
+
+.section-alt {
+  background-color: var(--background-alt);
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 4rem;
+  }
+
+  .container,
+  .container-narrow {
+    padding: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}

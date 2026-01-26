@@ -6,116 +6,17 @@
 
 .main-content {
   flex: 1;
-  padding-top: 80px;
+  padding-top: 90px;
 }
 
-/* Containers */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.container-narrow {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Buttons */
-.btn {
-  padding: 0.875rem 2rem;
-  border-radius: 4px;
-  font-weight: 400;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--white);
-}
-
-.btn-primary:hover {
-  background-color: #5A7A6D;
-  color: var(--white);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-}
-
-.btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
-}
-
-/* Forms */
-.form-group {
-  margin-bottom: 1.5rem;
-  text-align: left;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  font-size: 0.875rem;
-}
-
-.form-input,
-.form-textarea,
-.form-select {
-  width: 100%;
-  padding: 0.875rem;
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-  background-color: var(--white);
-}
-
-.form-input:focus,
-.form-textarea:focus,
-.form-select:focus {
-  outline: none;
-  border-color: var(--primary-color);
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-error {
-  color: #C0392B;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-.form-success {
-  background-color: #E8F5E9;
-  color: #2E7D32;
-  padding: 1rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .main-content {
     padding-top: 70px;
   }
+}
 
-  .container,
-  .container-narrow {
-    padding: 0 1.5rem;
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 60px;
   }
 }

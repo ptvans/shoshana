@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import InstagramIcon from './InstagramIcon'
-import logo from '../images/Logo-aligned-heart.png'
+import logo from '../photos/shoshana/logo-new.png'
 import './Header.css'
 
 function Header() {
@@ -16,7 +15,6 @@ function Header() {
     setIsMenuOpen(false)
   }
 
-  // Close menu when route changes
   const handleLinkClick = () => {
     closeMenu()
   }
@@ -25,9 +23,47 @@ function Header() {
     <header className="header">
       <div className="container">
         <nav className="nav">
+          <div className="nav-left">
+            <ul className="nav-links-left">
+              <li>
+                <Link
+                  to="/about"
+                  className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  Services
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           <Link to="/" className="logo" onClick={handleLinkClick}>
-            <img src={logo} alt="Aligned Heart" className="logo-image" />
+            <img src={logo} alt="Shoshana Polansky - Licensed Marriage and Family Therapist" className="logo-image" />
           </Link>
+
+          <div className="nav-right">
+            <ul className="nav-links-right">
+              <li>
+                <a
+                  href="https://app.greminders.com/c/shoshanapolansky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link nav-cta"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <button
             className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
@@ -40,25 +76,36 @@ function Header() {
             <span className="menu-bar"></span>
           </button>
 
-          <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-            <li>
-              <Link to="/about" className="nav-link" onClick={handleLinkClick}>Private Therapy</Link>
-            </li>
-            <li>
-              <Link to="/services" className="nav-link" onClick={handleLinkClick}>Services</Link>
-            </li>
-            <li>
-              <Link to="/servicios" className="nav-link" onClick={handleLinkClick}>Español</Link>
-            </li>
-            <li>
-              <Link to="/new-client" className="nav-link" onClick={handleLinkClick}>Contact</Link>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/terra_artist_love/" target="_blank" rel="noopener noreferrer" className="nav-link nav-icon">
-                <InstagramIcon size={22} />
-              </a>
-            </li>
-          </ul>
+          <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+            <ul className="mobile-nav-links">
+              <li>
+                <Link to="/about" className="mobile-nav-link" onClick={handleLinkClick}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="mobile-nav-link" onClick={handleLinkClick}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/new-client" className="mobile-nav-link" onClick={handleLinkClick}>
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://app.greminders.com/c/shoshanapolansky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mobile-nav-link mobile-cta"
+                  onClick={handleLinkClick}
+                >
+                  Schedule Consultation
+                </a>
+              </li>
+            </ul>
+          </div>
 
           {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
         </nav>

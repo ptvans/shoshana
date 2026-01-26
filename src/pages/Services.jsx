@@ -1,77 +1,160 @@
-import ContactForm from '../components/ContactForm'
 import './Services.css'
 
 function Services() {
   return (
-    <div className="services">
-      <section className="section-minimal">
-        <div className="container-narrow">
-          <h1>Services & Rates</h1>
-
-          <div className="rates-list">
-            <div className="rate-item">
-              <span className="rate-service">Individual Sessions</span>
-              <span className="rate-price">$180</span>
-            </div>
-            <div className="rate-item">
-              <span className="rate-service">Couples Sessions</span>
-              <span className="rate-price">$300</span>
-            </div>
-          </div>
-
-          <div className="rates-notes">
-            <p>I offer a sliding scale if needed.</p>
-          </div>
-
-          <div className="policy-section">
-            <h2>Insurance</h2>
-            <p>Most PPO health insurance accepted.</p>
-            <p>
-              I am not in-network with any insurance companies, so I do not bill
-              directly. With PPO insurance plans, I am considered an out-of-network
-              provider and you may be reimbursed in full or in part. I can provide
-              you with a monthly superbill to submit to your insurer.
-            </p>
-            <p>Please check your coverage by asking the following questions:</p>
-            <ul className="insurance-questions">
-              <li>Does my plan provide out-of-network reimbursement for mental health?</li>
-              <li>Is there a deductible I need to meet before reimbursement begins?</li>
-              <li>How many sessions per year does my health insurance cover?</li>
-              <li>What percentage of the fee do you cover?</li>
-            </ul>
-          </div>
-
-          <div className="policy-section">
-            <h2>Payment</h2>
-            <p>
-              Cash, check, and all major credit cards accepted.
-              Payment is collected prior to each session.
-            </p>
-          </div>
-
-          <div className="policy-section">
-            <h2>Cancellation Policy</h2>
-            <p>
-              I require at least 24 hours advanced notice for cancellations,
-              or you will be required to pay the full cost of the session.
-            </p>
-          </div>
-
-          <div className="policy-section">
-            <h2>Teletherapy</h2>
-            <p>
-              I offer both in-person and virtual sessions for California residents.
-              I use a secure HIPAA-compliant platform (Simple Practice) to conduct
-              video sessions, which you can access on your computer, tablet, or phone.
-            </p>
-          </div>
-
+    <div className="services-page">
+      {/* Hero */}
+      <section className="services-hero">
+        <div className="container">
+          <h1>Services</h1>
+          <p className="services-intro">
+            I offer therapy and coaching to help you heal from trauma and build
+            stronger relationships—wherever you are.
+          </p>
         </div>
       </section>
 
-      <section className="section-minimal section-cta">
+      {/* Services Grid */}
+      <section className="services-main section-alt">
         <div className="container">
-          <ContactForm />
+          <div className="services-grid">
+            <div className="service-card">
+              <span className="service-num">01</span>
+              <h2>Individual Therapy</h2>
+              <p>
+                One-on-one therapy for trauma, anxiety, depression, and relationship
+                patterns. Using EMDR and other evidence-based approaches, we'll work
+                together to process difficult experiences and create lasting change.
+              </p>
+              <div className="service-details">
+                <p><strong>Available:</strong></p>
+                <ul>
+                  <li>In-person in California & Florida</li>
+                  <li>Online throughout the US</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="service-card">
+              <span className="service-num">02</span>
+              <h2>Couples Therapy</h2>
+              <p>
+                For couples ready to improve communication, rebuild intimacy, and
+                break destructive patterns. Whether you're navigating conflict,
+                disconnection, or exploring relationship structures like non-monogamy.
+              </p>
+              <div className="service-details">
+                <p><strong>Available:</strong></p>
+                <ul>
+                  <li>In-person in California & Florida</li>
+                  <li>Online throughout the US</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="service-card">
+              <span className="service-num">03</span>
+              <h2>Coaching</h2>
+              <p>
+                Goal-focused support for personal growth and relationship skills.
+                Coaching is not therapy but can be a powerful tool for those seeking
+                guidance, accountability, and practical strategies.
+              </p>
+              <div className="service-details">
+                <p><strong>Available:</strong></p>
+                <ul>
+                  <li>Worldwide via video or phone</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EMDR Highlight */}
+      <section className="emdr-highlight-section">
+        <div className="container-narrow">
+          <h2>Specialized in EMDR</h2>
+          <p>
+            EMDR (Eye Movement Desensitization and Reprocessing) is a specialized
+            therapy I offer for processing trauma and distressing life experiences.
+            It's particularly effective for:
+          </p>
+          <ul className="emdr-list">
+            <li>PTSD and trauma symptoms</li>
+            <li>Panic attacks and anxiety</li>
+            <li>Childhood trauma and abuse</li>
+            <li>Grief and loss</li>
+            <li>Phobias and fears</li>
+          </ul>
+          <p>
+            Many clients experience significant relief faster than with traditional
+            talk therapy alone.
+          </p>
+        </div>
+      </section>
+
+      {/* Getting Started */}
+      <section className="getting-started-section section-alt">
+        <div className="container">
+          <h2>How to Get Started</h2>
+          <div className="steps-grid">
+            <div className="step-item">
+              <span className="step-num">1</span>
+              <h3>Free Consultation</h3>
+              <p>Schedule a brief call to discuss your needs and see if we're a good fit.</p>
+            </div>
+            <div className="step-item">
+              <span className="step-num">2</span>
+              <h3>Book Your First Session</h3>
+              <p>Choose a time that works for you—in-person or online.</p>
+            </div>
+            <div className="step-item">
+              <span className="step-num">3</span>
+              <h3>Begin Your Journey</h3>
+              <p>Start working toward the healing and connection you deserve.</p>
+            </div>
+          </div>
+          <div className="getting-started-cta">
+            <a
+              href="https://app.greminders.com/c/shoshanapolansky"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Schedule a Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Policies */}
+      <section className="policies-section">
+        <div className="container-narrow">
+          <h2>Policies</h2>
+          <div className="policies-grid">
+            <div className="policy-item">
+              <h3>Insurance</h3>
+              <p>
+                I am an out-of-network provider. If you have PPO insurance, you may
+                be eligible for reimbursement. I provide superbills you can submit
+                to your insurance company.
+              </p>
+            </div>
+            <div className="policy-item">
+              <h3>Payment</h3>
+              <p>
+                All major credit cards accepted. Payment is collected at the time of service.
+              </p>
+            </div>
+            <div className="policy-item">
+              <h3>Cancellations</h3>
+              <p>
+                Please provide at least 24 hours notice for cancellations to avoid
+                being charged the full session fee.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
