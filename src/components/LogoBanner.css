@@ -1,0 +1,42 @@
+.logo-banner {
+  background-color: #C9AE97;
+  padding: 1.5rem 0;
+  margin-top: 50px; /* Account for fixed header */
+}
+
+.logo-banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+  line-height: 0;
+}
+
+.logo-banner .logo-image {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 968px) {
+  .logo-banner {
+    padding: 1.25rem 0;
+  }
+
+  .logo-banner .logo-image {
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-banner {
+    padding: 1rem 0;
+  }
+
+  .logo-banner .logo-image {
+    height: 60px;
+  }
+}

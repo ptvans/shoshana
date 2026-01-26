@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../photos/shoshana/logo-new.png'
 import './Header.css'
 
 function Header() {
@@ -23,47 +22,54 @@ function Header() {
     <header className="header">
       <div className="container">
         <nav className="nav">
-          <div className="nav-left">
-            <ul className="nav-links-left">
-              <li>
-                <Link
-                  to="/about"
-                  className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
-                  onClick={handleLinkClick}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`}
-                  onClick={handleLinkClick}
-                >
-                  Services
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <Link to="/" className="logo" onClick={handleLinkClick}>
-            <img src={logo} alt="Shoshana Polansky - Licensed Marriage and Family Therapist" className="logo-image" />
-          </Link>
-
-          <div className="nav-right">
-            <ul className="nav-links-right">
-              <li>
-                <a
-                  href="https://app.greminders.com/c/shoshanapolansky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-link nav-cta"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul className="nav-links">
+            <li>
+              <Link
+                to="/"
+                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+                onClick={handleLinkClick}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+                onClick={handleLinkClick}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services"
+                className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`}
+                onClick={handleLinkClick}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services#coaching"
+                className={`nav-link ${location.hash === '#coaching' ? 'active' : ''}`}
+                onClick={handleLinkClick}
+              >
+                Coaching
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://app.greminders.com/c/shoshanapolansky"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link nav-cta"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
 
           <button
             className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
@@ -79,6 +85,11 @@ function Header() {
           <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
             <ul className="mobile-nav-links">
               <li>
+                <Link to="/" className="mobile-nav-link" onClick={handleLinkClick}>
+                  Home
+                </Link>
+              </li>
+              <li>
                 <Link to="/about" className="mobile-nav-link" onClick={handleLinkClick}>
                   About
                 </Link>
@@ -89,8 +100,8 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/new-client" className="mobile-nav-link" onClick={handleLinkClick}>
-                  Contact
+                <Link to="/services#coaching" className="mobile-nav-link" onClick={handleLinkClick}>
+                  Coaching
                 </Link>
               </li>
               <li>

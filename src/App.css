@@ -6,17 +6,4 @@
 
 .main-content {
   flex: 1;
-  padding-top: 90px;
-}
-
-@media (max-width: 968px) {
-  .main-content {
-    padding-top: 70px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-content {
-    padding-top: 60px;
-  }
 }
