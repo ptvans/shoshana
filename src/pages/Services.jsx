@@ -134,17 +134,24 @@ function Services() {
           <h2>Policies</h2>
           <div className="policies-grid">
             <div className="policy-item">
-              <h3>Insurance</h3>
+              <h3>Rates</h3>
               <p>
-                I am an out-of-network provider. If you have PPO insurance, you may
-                be eligible for reimbursement. I provide superbills you can submit
-                to your insurance company.
+                Individual sessions are $200 for a 50-minute session.
+                Please contact me if you have any questions about rates.
               </p>
             </div>
             <div className="policy-item">
               <h3>Payment</h3>
               <p>
-                All major credit cards accepted. Payment is collected at the time of service.
+                I accept cash, credit card, check, HSA accounts, and FSA accounts.
+                Payment is collected at the time of service.
+              </p>
+            </div>
+            <div className="policy-item">
+              <h3>Insurance</h3>
+              <p>
+                I am an out-of-network provider and offer superbills for
+                reimbursement from your insurance company.
               </p>
             </div>
             <div className="policy-item">
