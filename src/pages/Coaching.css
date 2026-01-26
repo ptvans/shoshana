@@ -1,0 +1,228 @@
+/* Coaching Hero */
+.coaching-hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.coaching-hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.coaching-intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Coaching Overview */
+.coaching-overview {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.coaching-overview h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.coaching-overview p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Coaching Areas */
+.coaching-areas {
+  padding: 5rem 0;
+}
+
+.coaching-areas h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.area-card {
+  background: var(--background-card);
+  padding: 2.5rem;
+}
+
+.area-num {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.area-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-sans);
+}
+
+.area-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Coaching Process */
+.coaching-process {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.coaching-process h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.process-item {
+  text-align: center;
+}
+
+.process-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.process-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+}
+
+.process-item p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.coaching-cta {
+  margin-top: 2rem;
+}
+
+/* Coaching Availability */
+.coaching-availability {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.coaching-availability h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.coaching-availability > .container-narrow > p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+.availability-note {
+  background: var(--background-alt);
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--primary-color);
+  text-align: left;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.availability-note p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+/* Final CTA */
+.coaching-final-cta {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.final-cta-content p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .areas-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .process-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .coaching-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .area-card {
+    padding: 2rem;
+  }
+
+  .availability-note {
+    padding: 1.25rem 1.5rem;
+  }
+}

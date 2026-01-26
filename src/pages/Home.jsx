@@ -69,6 +69,7 @@ function Home() {
                     Process trauma, manage anxiety, and break free from patterns
                     holding you back using EMDR and other evidence-based approaches.
                   </p>
+                  <Link to="/services" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
               <div className="service-item">
@@ -79,6 +80,7 @@ function Home() {
                     Improve communication, rebuild intimacy, and navigate
                     challenges together in a supportive environment.
                   </p>
+                  <Link to="/services" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
               <div className="service-item">
@@ -89,6 +91,7 @@ function Home() {
                     Goal-focused support for personal growth and relationship
                     skills, available worldwide.
                   </p>
+                  <Link to="/coaching" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
             </div>

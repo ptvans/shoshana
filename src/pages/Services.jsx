@@ -6,10 +6,10 @@ function Services() {
       {/* Hero */}
       <section className="services-hero">
         <div className="container">
-          <h1>Services</h1>
+          <h1>Therapy</h1>
           <p className="services-intro">
-            I offer therapy and coaching to help you heal from trauma and build
-            stronger relationships—wherever you are.
+            Healing from trauma and building stronger relationships through
+            evidence-based therapy—in person or online.
           </p>
         </div>
       </section>
@@ -17,7 +17,7 @@ function Services() {
       {/* Services Grid */}
       <section className="services-main section-alt">
         <div className="container">
-          <div className="services-grid">
+          <div className="services-grid services-grid-two">
             <div className="service-card">
               <span className="service-num">01</span>
               <h2>Individual Therapy</h2>
@@ -48,22 +48,6 @@ function Services() {
                 <ul>
                   <li>In-person in California & Florida</li>
                   <li>Online throughout the US</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="service-card">
-              <span className="service-num">03</span>
-              <h2>Coaching</h2>
-              <p>
-                Goal-focused support for personal growth and relationship skills.
-                Coaching is not therapy but can be a powerful tool for those seeking
-                guidance, accountability, and practical strategies.
-              </p>
-              <div className="service-details">
-                <p><strong>Available:</strong></p>
-                <ul>
-                  <li>Worldwide via video or phone</li>
                 </ul>
               </div>
             </div>

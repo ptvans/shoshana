@@ -30,6 +30,12 @@
   gap: 2rem;
 }
 
+.services-grid-two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .service-card {
   background: var(--background-card);
   padding: 2.5rem;

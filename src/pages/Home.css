@@ -158,6 +158,20 @@
   margin: 0;
 }
 
+.link-subtle {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.link-subtle:hover {
+  transform: translateX(4px);
+}
+
 /* Testimonials Section */
 .testimonials-section {
   padding: 6rem 0;

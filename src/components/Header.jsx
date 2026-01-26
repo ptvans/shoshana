@@ -47,13 +47,13 @@ function Header() {
                 className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`}
                 onClick={handleLinkClick}
               >
-                Services
+                Therapy
               </Link>
             </li>
             <li>
               <Link
-                to="/services#coaching"
-                className={`nav-link ${location.hash === '#coaching' ? 'active' : ''}`}
+                to="/coaching"
+                className={`nav-link ${location.pathname === '/coaching' ? 'active' : ''}`}
                 onClick={handleLinkClick}
               >
                 Coaching
@@ -96,11 +96,11 @@ function Header() {
               </li>
               <li>
                 <Link to="/services" className="mobile-nav-link" onClick={handleLinkClick}>
-                  Services
+                  Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/services#coaching" className="mobile-nav-link" onClick={handleLinkClick}>
+                <Link to="/coaching" className="mobile-nav-link" onClick={handleLinkClick}>
                   Coaching
                 </Link>
               </li>
