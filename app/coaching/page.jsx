@@ -1,4 +1,13 @@
-import './Coaching.css'
+import './page.css'
+
+export const metadata = {
+  title: 'Coaching | Personal Growth & Relationship Skills',
+  description: 'Goal-focused coaching for personal growth and relationship skills. Available worldwide via video call.',
+  openGraph: {
+    title: 'Coaching | Personal Growth & Relationship Skills',
+    description: 'Goal-focused coaching for personal growth and relationship skills. Available worldwide via video call.',
+  },
+}
 
 function Coaching() {
   return (
@@ -18,12 +27,12 @@ function Coaching() {
         <div className="container-narrow">
           <h2>What is Coaching?</h2>
           <p>
-            Coaching is not therapy—it's a forward-focused partnership designed to help you
+            Coaching is not therapy—it&#39;s a forward-focused partnership designed to help you
             achieve specific goals, develop new skills, and create meaningful change in your life.
           </p>
           <p>
             While therapy often focuses on healing past wounds, coaching focuses on where you
-            want to go and how to get there. It's ideal for people who are generally functioning
+            want to go and how to get there. It&#39;s ideal for people who are generally functioning
             well but want support in reaching the next level.
           </p>
         </div>
@@ -71,15 +80,15 @@ function Coaching() {
               <span className="process-num">1</span>
               <h3>Discovery Call</h3>
               <p>
-                We'll discuss your goals and determine if coaching is the right fit for
-                what you're looking to achieve.
+                We&#39;ll discuss your goals and determine if coaching is the right fit for
+                what you&#39;re looking to achieve.
               </p>
             </div>
             <div className="process-item">
               <span className="process-num">2</span>
               <h3>Set Your Goals</h3>
               <p>
-                Together we'll clarify what success looks like and create a roadmap
+                Together we&#39;ll clarify what success looks like and create a roadmap
                 for getting there.
               </p>
             </div>
@@ -87,7 +96,7 @@ function Coaching() {
               <span className="process-num">3</span>
               <h3>Take Action</h3>
               <p>
-                Through regular sessions, you'll gain tools, accountability, and support
+                Through regular sessions, you&#39;ll gain tools, accountability, and support
                 to make real progress.
               </p>
             </div>
@@ -110,15 +119,15 @@ function Coaching() {
         <div className="container-narrow">
           <h2>Available Worldwide</h2>
           <p>
-            Because coaching doesn't require a therapy license, I'm able to work with
+            Because coaching doesn&#39;t require a therapy license, I&#39;m able to work with
             clients anywhere in the world. Sessions are conducted via video call at
             times that work across time zones.
           </p>
           <div className="availability-note">
             <p>
-              <strong>Note:</strong> Coaching is not a substitute for therapy. If you're
+              <strong>Note:</strong> Coaching is not a substitute for therapy. If you&#39;re
               dealing with trauma, mental health conditions, or need clinical support,
-              therapy may be a better fit. Not sure which is right for you? Let's talk
+              therapy may be a better fit. Not sure which is right for you? Let&#39;s talk
               about it during your free consultation.
             </p>
           </div>

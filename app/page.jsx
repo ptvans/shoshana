@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
-import shoshanaSitting from '../photos/shoshana/Shoshsna-Sitting.jpg'
-import officePhoto from '../photos/shoshana/couch-room-background.jpeg'
-import './Home.css'
+import Link from 'next/link'
+import shoshanaSitting from '../src/photos/shoshana/Shoshsna-Sitting.jpg'
+import officePhoto from '../src/photos/shoshana/couch-room-background.jpeg'
+import './page.css'
 
 function Home() {
   return (
@@ -12,7 +12,7 @@ function Home() {
           <div className="hero-layout">
             <div className="hero-image-wrapper">
               <div className="hero-image-frame">
-                <img src={shoshanaSitting} alt="Shoshana Polansky, therapist" />
+                <img src={shoshanaSitting.src} alt="Shoshana Polansky, therapist" />
               </div>
             </div>
             <div className="hero-content">
@@ -44,7 +44,7 @@ function Home() {
               <p className="intro-question">
                 Are you carrying the weight of past experiences that still affect
                 your relationships and daily life? Do you find yourself stuck in
-                patterns you can't seem to break?
+                patterns you can&#39;t seem to break?
               </p>
               <div className="intro-divider"></div>
               <p className="intro-statement">You are not alone.</p>
@@ -69,7 +69,7 @@ function Home() {
                     Process trauma, manage anxiety, and break free from patterns
                     holding you back using EMDR and other evidence-based approaches.
                   </p>
-                  <Link to="/services" className="link-subtle">Learn more →</Link>
+                  <Link href="/services" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
               <div className="service-item">
@@ -80,7 +80,7 @@ function Home() {
                     Improve communication, rebuild intimacy, and navigate
                     challenges together in a supportive environment.
                   </p>
-                  <Link to="/services" className="link-subtle">Learn more →</Link>
+                  <Link href="/services" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
               <div className="service-item">
@@ -91,7 +91,7 @@ function Home() {
                     Goal-focused support for personal growth and relationship
                     skills, available worldwide.
                   </p>
-                  <Link to="/coaching" className="link-subtle">Learn more →</Link>
+                  <Link href="/coaching" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
             </div>
@@ -106,25 +106,25 @@ function Home() {
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <p>
-                "EMDR changed everything for me. Memories that used to send me
+                &ldquo;EMDR changed everything for me. Memories that used to send me
                 into a panic now feel like they belong in the past, where they
-                should be. I finally feel like I can move forward."
+                should be. I finally feel like I can move forward.&rdquo;
               </p>
               <cite>— Trauma therapy client</cite>
             </div>
             <div className="testimonial-card">
               <p>
-                "We came in barely communicating. Now we actually hear each other
+                &ldquo;We came in barely communicating. Now we actually hear each other
                 and have tools to work through conflict instead of avoiding it.
-                Our relationship feels alive again."
+                Our relationship feels alive again.&rdquo;
               </p>
               <cite>— Couples therapy client</cite>
             </div>
             <div className="testimonial-card">
               <p>
-                "I spent years taking care of everyone else. Shoshana helped me
+                &ldquo;I spent years taking care of everyone else. Shoshana helped me
                 understand why I struggled to ask for what I needed—and gave me
-                the tools to finally change that pattern."
+                the tools to finally change that pattern.&rdquo;
               </p>
               <cite>— Individual therapy client</cite>
             </div>
@@ -147,15 +147,15 @@ function Home() {
         <div className="container">
           <div className="cta-layout">
             <div className="cta-image">
-              <img src={officePhoto} alt="Therapy office" />
+              <img src={officePhoto.src} alt="Therapy office" />
             </div>
             <div className="cta-content">
               <p className="cta-tagline">
-                It's time to <em>reclaim your peace</em> and <em>find your path</em> forward.
+                It&#39;s time to <em>reclaim your peace</em> and <em>find your path</em> forward.
               </p>
               <div className="cta-text">
                 <p>
-                  Hi, I'm Shoshana—a therapist specializing in trauma and
+                  Hi, I&#39;m Shoshana—a therapist specializing in trauma and
                   relationships. I help individuals and couples heal from the
                   past and build the connections they deserve.
                 </p>
@@ -163,7 +163,7 @@ function Home() {
                   Using EMDR and other evidence-based approaches, I create a
                   safe space where real change can happen.
                 </p>
-                <Link to="/about" className="link-arrow">
+                <Link href="/about" className="link-arrow">
                   Learn more about my approach →
                 </Link>
               </div>

@@ -1,10 +1,18 @@
-# Product Requirements Document: Aligned Heart Therapist Website
+# Product Requirements Document: Shoshana Polansky, LMFT — Therapy Website
 
 ## Project Overview
 
-A modern React web application for "Aligned Heart," a private therapy practice run by Terra Crowl, LCSW (Licensed Clinical Social Worker). The site showcases therapeutic services, allows new clients to submit intake requests, and integrates with the GoHighLevel CRM platform.
+A modern React SPA for Shoshana Polansky, Licensed Marriage and Family Therapist. The site showcases her therapy and coaching services, drives consultation bookings via GoHighLevel/GReminders, and is optimized for ADA/WCAG accessibility and Answer Engine Optimization (AEO).
 
-**Live URL:** www.youralignedheart.com
+**Practice:** Shoshana Polansky, LMFT
+**Specialties:** Trauma therapy (EMDR), couples therapy, relationship coaching
+**Locations:** In-person in California & Florida | Online nationwide | Coaching worldwide
+**Phone:** 858-863-7270
+**Scheduling:** https://app.greminders.com/c/shoshanapolansky
+
+**Interim URL:** https://ptvans.github.io/shoshana/
+**Final domain (pending DNS):** https://www.shoshanapolansky.com/
+**Blog (planned):** https://blog.shoshanapolansky.com/
 
 ---
 
@@ -15,168 +23,245 @@ A modern React web application for "Aligned Heart," a private therapy practice r
 | Frontend Framework | React 18.2.0 with React Router DOM 6.20.1 |
 | Build Tool | Vite 5.0.8 |
 | API Communication | Axios 1.6.2 |
-| Styling | CSS3 with CSS variables |
-| Fonts | Inter (sans-serif) & Cormorant Garamond (serif) |
+| Styling | CSS3 with CSS custom properties |
+| Fonts | Nunito Sans (body) & Cormorant Garamond (headings) |
 | Deployment | GitHub Pages with GitHub Actions CI/CD |
-| CRM Integration | GoHighLevel REST API |
+| Scheduling / CRM | GoHighLevel / GReminders |
 
 ---
 
 ## Project Structure
 
 ```
-therapist/
+shoshana/
 ├── src/
-│   ├── components/           # Reusable UI components
-│   │   ├── Header.jsx        # Navigation with hamburger menu
-│   │   ├── Footer.jsx        # Footer with contact info
-│   │   └── InstagramIcon.jsx # Social media icon
+│   ├── components/
+│   │   ├── Header.jsx          # Fixed nav with mobile hamburger menu
+│   │   ├── Header.css
+│   │   ├── Footer.jsx          # Contact info, phone, schedule CTA
+│   │   ├── Footer.css
+│   │   ├── LogoBanner.jsx      # Logo strip below header
+│   │   ├── LogoBanner.css
+│   │   ├── ScrollToTop.jsx     # Resets scroll on route change
+│   │   ├── ContactForm.jsx     # (legacy — replaced by embedded GHL form)
+│   │   └── InstagramIcon.jsx   # SVG icon component
 │   │
-│   ├── pages/                # Page components
-│   │   ├── Home.jsx          # Landing page
-│   │   ├── About.jsx         # Therapist background
-│   │   ├── Services.jsx      # English services & rates
-│   │   ├── Servicios.jsx     # Spanish services & rates
-│   │   └── NewClient.jsx     # Client intake form
+│   ├── pages/
+│   │   ├── Home.jsx            # Hero, services overview, testimonials, CTA
+│   │   ├── About.jsx           # Bio, who I work with, EMDR, CTA
+│   │   ├── Services.jsx        # Therapy services, EMDR, process, rates
+│   │   ├── Coaching.jsx        # Coaching offering, how it works, CTA
+│   │   └── NewClient.jsx       # Contact page with booking CTA & crisis info
 │   │
 │   ├── services/
-│   │   └── api.js            # GoHighLevel API integration
+│   │   └── api.js              # GoHighLevel API integration (demo mode available)
 │   │
-│   ├── App.jsx               # Main app with routing
-│   └── main.jsx              # React entry point
+│   ├── photos/                 # Therapist photos, office, logo
+│   ├── images/                 # Logo variants
+│   ├── App.jsx                 # Router + layout shell + skip link
+│   ├── App.css                 # App layout + skip-to-content styles
+│   ├── index.css               # Global design system (variables, typography)
+│   └── main.jsx                # React entry point
 │
 ├── public/
-│   └── CNAME                 # Custom domain config
+│   ├── CNAME                   # www.shoshanapolansky.com (pending DNS)
+│   ├── robots.txt              # Allows all crawlers incl. AI bots (AEO)
+│   ├── sitemap.xml             # All 5 pages
+│   ├── llms.txt                # AI-readable site summary (AEO)
+│   └── 404.html                # SPA routing redirect for GitHub Pages
 │
 ├── .github/workflows/
-│   └── deploy.yml            # GitHub Actions deployment
+│   └── deploy.yml              # GitHub Actions: push to main → deploy
 │
-└── vite.config.js            # Vite configuration
+├── index.html                  # Entry HTML: SEO meta, OG, JSON-LD schema
+└── vite.config.js              # base: '/shoshana/' (interim GitHub Pages path)
 ```
 
 ---
 
-## Current Features
+## Pages & Features
 
-### 1. Home Page (`/`)
-- Hero section with therapist portrait
-- Practice name and tagline
-- Specialties sections for individuals and couples
-- Call-to-action buttons
+### 1. Home (`/`)
+- Hero: therapist portrait, headline, "Schedule a Consultation" CTA
+- Intro: empathetic hook — "You are not alone"
+- Services overview: Individual Therapy, Couples Therapy, Coaching (numbered cards)
+- Testimonials: 3 anonymized client quotes
+- About teaser: office photo + short bio + link to About page
+- Availability grid: In-Person (CA & FL) | Online Therapy | Coaching
 
-### 2. About Page (`/about`)
-- Therapist background and experience (8+ years)
-- Therapeutic modalities: Motivational Interviewing, ACT, MBCT
-- "Who I Work With" section
+### 2. About (`/about`)
+- Therapist bio and philosophy
+- "Who I Work With": The Caretaker, Couples Ready for Change, Trauma Survivors
+- EMDR explainer section (conditions helped, how it differs from talk therapy)
+- CTA: free consultation
 
-### 3. Services Pages
-- **English** (`/services`): Rates ($150 individual/$300 couples), insurance, sliding scale
-- **Spanish** (`/servicios`): Full Spanish translation
+### 3. Therapy / Services (`/services`)
+- Individual Therapy and Couples Therapy (2-column grid)
+- EMDR specialty highlight
+- 3-step intake process (Free Consultation → First Session → Begin Journey)
+- Policies: Rates ($200/50 min), payment methods, insurance (out-of-network + superbills), cancellation
 
-### 4. New Client Intake Form (`/new-client`)
-- Comprehensive contact form with validation
-- Fields: personal info, therapeutic history, source tracking
-- Emergency crisis disclaimer with 988 lifeline
-- GoHighLevel CRM integration (demo mode available)
+### 4. Coaching (`/coaching`)
+- Coaching vs. therapy distinction
+- Areas of focus: Relationship Skills, Personal Growth, Life Transitions
+- 3-step coaching process
+- Worldwide availability via video
 
-### 5. Navigation
-- Fixed header with responsive design
-- Mobile hamburger menu with animations
-- Links: Private Therapy, Services, Español, Contact, Instagram
+### 5. Contact / New Client (`/new-client`)
+- Booking card (external GReminders link)
+- Contact info (phone)
+- 3-step onboarding process
+- Crisis resources: 988 Lifeline, emergency room redirect
+
+### 6. Navigation
+- Desktop: fixed top bar with Home, About, Therapy, Coaching, Contact CTA
+- Mobile: hamburger menu with slide-in overlay
+- Logo banner below header (links to home)
 
 ---
 
 ## Design System
 
 ### Color Palette
-- Primary: `#6B9080` (Sage Green)
-- Secondary: `#A4C3B2` (Light Sage)
-- Accent: `#CCE3DE` (Very Light Sage)
-- Text Primary: `#2C3E50` (Dark Blue-Gray)
-- Text Secondary: `#6B7C85` (Medium Gray)
-- Background: `#FAFCFB` (Off-white)
+| Variable | Value | Use |
+|----------|-------|-----|
+| `--primary-color` | `#B8977E` | Buttons, links, accents (terracotta) |
+| `--primary-dark` | `#9A7B62` | Button hover, focus outlines |
+| `--secondary-color` | `#D4C4B5` | Light tan accents |
+| `--accent-color` | `#E8DFD6` | Very light beige |
+| `--text-primary` | `#3D3D3D` | Body text |
+| `--text-secondary` | `#595959` | Secondary text (WCAG AA compliant) |
+| `--background` | `#F7F3EF` | Warm cream page background |
+| `--background-alt` | `#F0EAE3` | Alternate section background |
+| `--header-bg` | `#C9AE97` | Header and logo banner |
 
 ### Typography
-- Headings: Cormorant Garamond (serif)
-- Body: Inter (sans-serif)
+- **Headings:** Cormorant Garamond (serif) — elegant, calming
+- **Body:** Nunito Sans (sans-serif) — readable, approachable
+
+### Breakpoints
+- Mobile: < 768px (general)
+- Nav collapse: < 968px (hamburger menu)
 
 ---
 
-## GoHighLevel Integration
+## Accessibility (WCAG 2.1 AA)
 
-**Environment Variables Required:**
-- `VITE_GHL_API_KEY` - API authentication
-- `VITE_GHL_LOCATION_ID` - Location identifier
+### Completed Fixes
 
-**Demo Mode:** Site functions without API credentials for testing.
+| # | Issue | WCAG | Fix |
+|---|-------|------|-----|
+| 1 | No skip-to-content link | 2.4.1 (A) | Added `.skip-link` in App.jsx, styled in App.css |
+| 2 | `outline: none` on button killed focus | 2.4.7 (AA) | Removed; added `*:focus-visible` rule |
+| 3 | `--text-secondary` ~4.2:1 contrast | 1.4.3 (AA) | Darkened `#6B6B6B` → `#595959` |
+| 4 | `a:hover` insufficient contrast | 1.4.3 (AA) | Changed to `#6B4F3A` |
+| 5 | Home page `<h1>` already correct | 1.3.1 (A) | Verified — hero uses `<h1>` |
+| 6 | Portrait alt text | 1.1.1 (A) | Hero: descriptive alt; decorative: `alt=""` |
+
+### Pending / Future
+- [ ] Audit `--primary-color` (#B8977E) contrast as link text on cream background (~2.5:1 — fails AA). Consider a dedicated darker link color variable.
+- [ ] Audit button text contrast: white on `#B8977E` ~2.7:1 — fails AA for small text. Consider darkening button background or using a contrast-safe alternative.
+- [ ] Instagram icon links — verify `aria-label` present and SVG has `aria-hidden`
+- [ ] Add `lang` attributes to any non-English content
+
+---
+
+## SEO & Answer Engine Optimization (AEO)
+
+### Completed
+
+| Asset | Details |
+|-------|---------|
+| `index.html` title | "Shoshana Polansky, LMFT \| Trauma Therapy & Couples Counseling \| CA & FL" |
+| Meta description | 155-char focused description |
+| Open Graph | og:type, og:url, og:title, og:description, og:site_name, og:locale |
+| Twitter Card | summary_large_image card |
+| Canonical URL | Set to interim GitHub Pages URL (update on domain switch) |
+| JSON-LD schema | `MedicalBusiness`, `Person`, `WebSite` nodes with full service catalog |
+| robots.txt | Allows all crawlers: GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, etc. |
+| sitemap.xml | All 5 pages with priorities |
+| llms.txt | AI-readable practice summary, services, FAQ, policies |
+
+### Pending
+- [ ] Submit sitemap to Google Search Console once on custom domain
+- [ ] Add page-level meta descriptions per route (requires React Helmet or similar)
+- [ ] Add FAQ schema (JSON-LD `FAQPage`) to Services and About pages
+- [ ] Add `og:image` once a professional headshot is designated as the share image
+- [ ] Set up Google Business Profile linked to final domain
 
 ---
 
 ## Deployment
 
 - **Platform:** GitHub Pages
-- **Trigger:** Push to main branch
-- **Domain:** www.youralignedheart.com
+- **Trigger:** Push to `main` branch → GitHub Actions builds and deploys
+- **Interim URL:** https://ptvans.github.io/shoshana/
+- **SPA routing:** 404.html redirect → index.html (rafgraph/spa-github-pages pattern)
+- **Vite base:** `/shoshana/` — must match the GitHub Pages repo subdirectory
+
+### Domain Migration Checklist (when DNS is ready)
+- [ ] `vite.config.js`: `base: '/shoshana/'` → `base: '/'`
+- [ ] `src/App.jsx`: Remove `basename="/shoshana"` from `<Router>`
+- [ ] `index.html`: Update canonical + OG `og:url` to `https://www.shoshanapolansky.com/`
+- [ ] `public/robots.txt`: Update Sitemap URL
+- [ ] `public/sitemap.xml`: Update all `<loc>` entries
+- [ ] `public/llms.txt`: Update website URL references
+- [ ] CNAME already set to `www.shoshanapolansky.com` ✓
+- [ ] Submit sitemap to Google Search Console
+- [ ] Set up Google Business Profile
 
 **NPM Scripts:**
 ```bash
-npm run dev      # Start dev server (port 3000)
-npm run build    # Production build
+npm run dev      # Dev server on port 3000
+npm run build    # Production build to dist/
 npm run preview  # Preview production build
 ```
 
 ---
 
-## Conversion Rate Benchmarks & Best Practices
+## Conversion Rate Optimization
 
-### Key Metrics
+### Benchmarks
 | Performance Level | Conversion Rate |
 |-------------------|-----------------|
-| Top-performing therapy websites | 15-25% |
-| Average healthcare | 9-10% |
-| Most therapy practice websites | 2-3% |
+| Top-performing therapy websites | 15–25% |
+| Average healthcare | 9–10% |
+| Most therapy practice websites | 2–3% |
 
-### Essential Elements of High-Converting Therapist Websites
-
-#### 1. Clear, Client-Focused Value Proposition
-- Focus on addressing client pain points and barriers, not credentials
-- Use empathetic, no-pressure language like "Explore whether therapy is right for you" rather than sales language
-- Trust words ("proven," "recommended") increase conversion rates
-- Fear words ("harmful," "illness") correlate with lower conversion rates
-
-#### 2. Strategic Call-to-Action Placement
-- Landing pages perform best with 1-3 strategically placed CTAs
-- Multiple contact methods easily visible on every page (phone, email, contact form)
-- Simplified booking process with minimal form fields
-
-#### 3. Trust-Building Elements
-- Client testimonials and success stories positioned strategically
-- FAQ sections addressing common concerns and barriers
-- Therapist introduction videos helping clients assess fit
-- Clear explanation of what happens next after contact
-
-#### 4. Progressive Engagement Options
-- Educational resources demonstrating expertise
-- Self-assessment tools
-- Virtual office tours
-- Email newsletter signup for those not ready to commit
-
-#### 5. Scarcity Without Desperation
-- Language like "Currently accepting a limited number of Saturday appointments" rather than appearing desperate for clients
-- Shows availability while implying demand
-
-#### 6. Mobile-First, User-Friendly Design
-- Fast loading speed (slow sites kill conversions)
-- Easy navigation with essential info readily accessible
-- Readable text and images (poor contrast is a common mistake)
-- Clear contact information on every page
+### Key Principles Applied
+- **Client-focused copy:** Pain points addressed directly ("You are not alone")
+- **Strategic CTAs:** 1–2 per page, never aggressive
+- **Trust elements:** Anonymized testimonials, EMDR credentials, clear process steps
+- **Low-friction booking:** External GReminders link (no form to fill out first)
+- **Mobile-first:** Responsive at all breakpoints, hamburger nav
 
 ---
 
-## Future Considerations
+## GoHighLevel / API Integration
 
-- [ ] Add blog/articles section
-- [ ] Calendar integration for booking
-- [ ] Testimonials page
-- [ ] Resource library for clients
-- [ ] Multi-language expansion
+`src/services/api.js` exports:
+- `createAppointment()` — creates appointment in GHL
+- `submitNewClientRequest()` — new client intake
+- `submitContactForm()` — contact form submission
+
+**Demo mode:** Site functions without API credentials (env vars not required for deploy).
+
+**Env vars (if activating):**
+```
+VITE_GHL_API_KEY
+VITE_GHL_LOCATION_ID
+```
+
+---
+
+## Future Roadmap
+
+- [ ] Blog at `blog.shoshanapolansky.com` (separate platform TBD)
+- [ ] Page-level `<title>` and meta descriptions via React Helmet or Vite plugin
+- [ ] FAQ schema (JSON-LD) on Services and About pages
+- [ ] `og:image` social share image
+- [ ] Google Business Profile
+- [ ] Testimonials page or expanded testimonials section
+- [ ] Resource library / psychoeducation articles
+- [ ] Calendar embed (if GReminders supports it)
+- [ ] Fix button and link text color contrast to fully pass WCAG AA

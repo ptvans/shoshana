@@ -16,7 +16,7 @@
 }
 
 .logo-banner .logo-image {
-  height: 120px;
+  height: 160px;
   width: auto;
   display: block;
 }
@@ -27,7 +27,7 @@
   }
 
   .logo-banner .logo-image {
-    height: 105px;
+    height: 125px;
   }
 }
 
@@ -37,6 +37,6 @@
   }
 
   .logo-banner .logo-image {
-    height: 90px;
+    height: 110px;
   }
 }

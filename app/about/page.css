@@ -164,7 +164,7 @@
 }
 
 .emdr-helps li::before {
-  content: "✓";
+  content: "\2713";
   color: var(--primary-color);
   position: absolute;
   left: 0;

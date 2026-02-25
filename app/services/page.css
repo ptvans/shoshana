@@ -92,7 +92,7 @@
 }
 
 .service-details li::before {
-  content: "•";
+  content: "\2022";
   color: var(--primary-color);
   position: absolute;
   left: 0;
@@ -134,7 +134,7 @@
 }
 
 .emdr-list li::before {
-  content: "✓";
+  content: "\2713";
   color: var(--primary-color);
   position: absolute;
   left: 0;

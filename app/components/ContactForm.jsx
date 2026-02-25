@@ -5,7 +5,7 @@ function ContactForm() {
     <div className="contact-form-section">
       <h2>Ready to Get Started?</h2>
       <p className="contact-intro">
-        Schedule a free consultation to discuss your needs and see if we're a good fit.
+        Schedule a free consultation to discuss your needs and see if we&#39;re a good fit.
       </p>
 
       <div className="contact-cta">

@@ -1,10 +1,13 @@
+'use client'
+
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import './Header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const location = useLocation()
+  const pathname = usePathname()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -25,8 +28,8 @@ function Header() {
           <ul className="nav-links">
             <li>
               <Link
-                to="/"
-                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+                href="/"
+                className={`nav-link ${pathname === '/' ? 'active' : ''}`}
                 onClick={handleLinkClick}
               >
                 Home
@@ -34,8 +37,8 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/about"
-                className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+                href="/about"
+                className={`nav-link ${pathname === '/about' ? 'active' : ''}`}
                 onClick={handleLinkClick}
               >
                 About
@@ -43,8 +46,8 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/services"
-                className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`}
+                href="/services"
+                className={`nav-link ${pathname === '/services' ? 'active' : ''}`}
                 onClick={handleLinkClick}
               >
                 Therapy
@@ -52,8 +55,8 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/coaching"
-                className={`nav-link ${location.pathname === '/coaching' ? 'active' : ''}`}
+                href="/coaching"
+                className={`nav-link ${pathname === '/coaching' ? 'active' : ''}`}
                 onClick={handleLinkClick}
               >
                 Coaching
@@ -85,22 +88,22 @@ function Header() {
           <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
             <ul className="mobile-nav-links">
               <li>
-                <Link to="/" className="mobile-nav-link" onClick={handleLinkClick}>
+                <Link href="/" className="mobile-nav-link" onClick={handleLinkClick}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="mobile-nav-link" onClick={handleLinkClick}>
+                <Link href="/about" className="mobile-nav-link" onClick={handleLinkClick}>
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="mobile-nav-link" onClick={handleLinkClick}>
+                <Link href="/services" className="mobile-nav-link" onClick={handleLinkClick}>
                   Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/coaching" className="mobile-nav-link" onClick={handleLinkClick}>
+                <Link href="/coaching" className="mobile-nav-link" onClick={handleLinkClick}>
                   Coaching
                 </Link>
               </li>

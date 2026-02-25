@@ -1,4 +1,13 @@
-import './NewClient.css'
+import './page.css'
+
+export const metadata = {
+  title: 'Contact | Schedule a Consultation',
+  description: 'Schedule a free consultation with Shoshana Polansky, LMFT. In-person in California & Florida, online nationwide.',
+  openGraph: {
+    title: 'Contact | Schedule a Consultation',
+    description: 'Schedule a free consultation with Shoshana Polansky, LMFT. In-person in California & Florida, online nationwide.',
+  },
+}
 
 function NewClient() {
   return (
@@ -9,7 +18,7 @@ function NewClient() {
           <h1>Contact</h1>
           <p className="contact-intro">
             Ready to take the first step? Schedule a free consultation to discuss
-            your needs and see if we're a good fit.
+            your needs and see if we&#39;re a good fit.
           </p>
         </div>
       </section>
@@ -40,7 +49,7 @@ function NewClient() {
               <div className="contact-method">
                 <h3>Phone</h3>
                 <a href="tel:+18588637270" className="contact-value">858-863-7270</a>
-                <p>Leave a message and I'll return your call within 24 hours.</p>
+                <p>Leave a message and I&#39;ll return your call within 24 hours.</p>
               </div>
 
               <div className="contact-method">
@@ -63,15 +72,15 @@ function NewClient() {
               <span className="expect-num">1</span>
               <h3>Free Consultation</h3>
               <p>
-                We'll have a brief conversation about what brings you to therapy
-                and what you're hoping to achieve.
+                We&#39;ll have a brief conversation about what brings you to therapy
+                and what you&#39;re hoping to achieve.
               </p>
             </div>
             <div className="expect-item">
               <span className="expect-num">2</span>
               <h3>Good Fit Assessment</h3>
               <p>
-                I'll share how I work and we'll determine if my approach
+                I&#39;ll share how I work and we&#39;ll determine if my approach
                 aligns with your needs.
               </p>
             </div>
@@ -79,7 +88,7 @@ function NewClient() {
               <span className="expect-num">3</span>
               <h3>Schedule First Session</h3>
               <p>
-                If we're a good match, we'll schedule your first full session
+                If we&#39;re a good match, we&#39;ll schedule your first full session
                 and begin working together.
               </p>
             </div>

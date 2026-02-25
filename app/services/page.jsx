@@ -1,4 +1,13 @@
-import './Services.css'
+import './page.css'
+
+export const metadata = {
+  title: 'Therapy Services | Individual & Couples Therapy',
+  description: 'Individual therapy, couples therapy, and EMDR for trauma. In-person in California & Florida, online throughout the US.',
+  openGraph: {
+    title: 'Therapy Services | Individual & Couples Therapy',
+    description: 'Individual therapy, couples therapy, and EMDR for trauma. In-person in California & Florida, online throughout the US.',
+  },
+}
 
 function Services() {
   return (
@@ -23,7 +32,7 @@ function Services() {
               <h2>Individual Therapy</h2>
               <p>
                 One-on-one therapy for trauma, anxiety, depression, and relationship
-                patterns. Using EMDR and other evidence-based approaches, we'll work
+                patterns. Using EMDR and other evidence-based approaches, we&#39;ll work
                 together to process difficult experiences and create lasting change.
               </p>
               <div className="service-details">
@@ -40,7 +49,7 @@ function Services() {
               <h2>Couples Therapy</h2>
               <p>
                 For couples ready to improve communication, rebuild intimacy, and
-                break destructive patterns. Whether you're navigating conflict,
+                break destructive patterns. Whether you&#39;re navigating conflict,
                 disconnection, or exploring relationship structures like non-monogamy.
               </p>
               <div className="service-details">
@@ -62,7 +71,7 @@ function Services() {
           <p>
             EMDR (Eye Movement Desensitization and Reprocessing) is a specialized
             therapy I offer for processing trauma and distressing life experiences.
-            It's particularly effective for:
+            It&#39;s particularly effective for:
           </p>
           <ul className="emdr-list">
             <li>PTSD and trauma symptoms</li>
@@ -86,7 +95,7 @@ function Services() {
             <div className="step-item">
               <span className="step-num">1</span>
               <h3>Free Consultation</h3>
-              <p>Schedule a brief call to discuss your needs and see if we're a good fit.</p>
+              <p>Schedule a brief call to discuss your needs and see if we&#39;re a good fit.</p>
             </div>
             <div className="step-item">
               <span className="step-num">2</span>

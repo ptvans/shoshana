@@ -1,0 +1,61 @@
+Next.js Migration Progress — paused 2026-02-24
+================================================
+
+STATUS: All files created. Blocked on `npm install` due to disk space.
+
+COMPLETED:
+  [x] Step 1: Scaffold Next.js project
+      - Created next.config.mjs (output: 'export', basePath: '/shoshana')
+      - Updated package.json (removed vite/react-router-dom, added next)
+      - Updated .gitignore (added .next/, out/)
+
+  [x] Step 2: App Router layout + global CSS
+      - app/layout.jsx (fonts via next/font/google, metadata, JSON-LD, skip-link, Header, LogoBanner, Footer)
+      - app/globals.css (from src/index.css, minus the @import for fonts)
+      - app/layout.css (from src/App.css)
+
+  [x] Step 3: Convert all 6 pages
+      - app/page.jsx + page.css (Home)
+      - app/about/page.jsx + page.css
+      - app/services/page.jsx + page.css
+      - app/coaching/page.jsx + page.css
+      - app/new-client/page.jsx + page.css
+      - app/servicios/page.jsx + page.css
+      - Each page exports metadata for SEO
+
+  [x] Step 4: Convert components
+      - app/components/Header.jsx + Header.css ('use client', usePathname, next/link)
+      - app/components/LogoBanner.jsx + LogoBanner.css (next/link, image.src)
+      - app/components/Footer.jsx + Footer.css (server component)
+      - app/components/ContactForm.jsx + ContactForm.css (server component)
+      - app/components/InstagramIcon.jsx (no changes)
+      - ScrollToTop.jsx deleted (Next.js handles natively)
+
+  [x] Step 5: Move API service + update GitHub Actions
+      - lib/api.js (import.meta.env.VITE_* → process.env.NEXT_PUBLIC_*)
+      - .github/workflows/deploy.yml (dist → out, added touch out/.nojekyll)
+
+  [x] Step 6: Clean up old files
+      - Deleted: vite.config.js, src/main.jsx, index.html, public/404.html
+      - Deleted: src/App.jsx, src/App.css, src/index.css
+      - Deleted: all src/pages/*.jsx and *.css
+      - Deleted: all src/components/*.jsx and *.css
+      - Deleted: src/services/api.js
+      - Remaining in src/: images/ and photos/ (static assets, kept in place)
+
+REMAINING:
+  [ ] Step 7: npm install + npm run build + verify output
+      - Need to run: npm install
+      - Then: npm run build
+      - Verify: out/index.html has pre-rendered HTML
+      - Verify: out/about/index.html has per-page <title>
+      - Verify: out/.nojekyll would be created by CI (or touch manually)
+
+KNOWN THINGS TO CHECK AFTER BUILD:
+  - Image imports use .src property (e.g., shoshanaSitting.src) — this is correct
+    for Next.js static imports in <img> tags
+  - If images don't resolve, may need to move src/photos/ and src/images/ into
+    public/ and use string paths instead of imports
+  - Footer uses new Date().getFullYear() which works fine in server components
+  - The `contact-intro` class exists in both ContactForm.css and NewClient page.css
+    — no collision since they target different parent contexts, but watch for it

@@ -1,5 +1,14 @@
-import shoshanaPortrait from '../photos/shoshana/Shoshana-portrait.jpg'
-import './About.css'
+import shoshanaPortrait from '../../src/photos/shoshana/Shoshana-portrait.jpg'
+import './page.css'
+
+export const metadata = {
+  title: 'About Shoshana Polansky, LMFT | Trauma Therapist',
+  description: 'Licensed Marriage & Family Therapist specializing in trauma (EMDR), couples therapy, and relationship coaching. Learn about my approach to healing.',
+  openGraph: {
+    title: 'About Shoshana Polansky, LMFT | Trauma Therapist',
+    description: 'Licensed Marriage & Family Therapist specializing in trauma (EMDR), couples therapy, and relationship coaching. Learn about my approach to healing.',
+  },
+}
 
 function About() {
   return (
@@ -9,18 +18,18 @@ function About() {
         <div className="container">
           <div className="about-hero-layout">
             <div className="about-hero-content">
-              <h1>Hi, I'm Shoshana</h1>
+              <h1>Hi, I&#39;m Shoshana</h1>
               <p className="about-intro">
-                I'm a licensed marriage and family therapist specializing in trauma
+                I&#39;m a licensed marriage and family therapist specializing in trauma
                 and relationships. I help individuals and couples heal from the past
                 and build the connections they deserve.
               </p>
               <p>
                 I was drawn to this work because I understand how isolating it can
                 feel to carry the weight of difficult experiences alone. Whether
-                you're dealing with the lingering effects of childhood trauma,
+                you&#39;re dealing with the lingering effects of childhood trauma,
                 struggling in your relationships, or feeling stuck in patterns you
-                can't seem to break—I'm here to help.
+                can&#39;t seem to break—I&#39;m here to help.
               </p>
               <p>
                 My approach is warm, direct, and practical. I believe therapy works
@@ -30,7 +39,7 @@ function About() {
             </div>
             <div className="about-hero-image">
               <div className="about-image-frame">
-                <img src={shoshanaPortrait} alt="Shoshana Polansky" />
+                <img src={shoshanaPortrait.src} alt="Shoshana Polansky" />
               </div>
             </div>
           </div>
@@ -47,7 +56,7 @@ function About() {
               <div className="client-content">
                 <h3>The Caretaker Who Needs Care</h3>
                 <p>
-                  You're the one everyone turns to—stable, strong, always helpful.
+                  You&#39;re the one everyone turns to—stable, strong, always helpful.
                   But somehow, you can never get your own needs met. You give and give,
                   and wonder why your relationships feel one-sided. I help you understand
                   this pattern and learn to receive as well as you give.
@@ -61,7 +70,7 @@ function About() {
                 <h3>Couples Ready for Change</h3>
                 <p>
                   Your relationship has become stale, distant, or filled with the same
-                  arguments on repeat. Whether you're navigating communication breakdowns,
+                  arguments on repeat. Whether you&#39;re navigating communication breakdowns,
                   sexual intimacy concerns, or exploring non-monogamy, I help couples
                   reconnect and build something stronger together.
                 </p>
@@ -94,7 +103,7 @@ function About() {
               stuck memories so they no longer trigger intense emotional reactions.
             </p>
             <p>
-              Unlike traditional talk therapy, EMDR doesn't require you to talk in
+              Unlike traditional talk therapy, EMDR doesn&#39;t require you to talk in
               detail about the traumatic event or complete homework between sessions.
               Many clients experience significant relief in fewer sessions than
               traditional approaches.
@@ -119,7 +128,7 @@ function About() {
           <div className="about-cta-content">
             <h2>Ready to take the first step?</h2>
             <p>
-              Schedule a free consultation to discuss your needs and see if we're a good fit.
+              Schedule a free consultation to discuss your needs and see if we&#39;re a good fit.
             </p>
             <a
               href="https://app.greminders.com/c/shoshanapolansky"

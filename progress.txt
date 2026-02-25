@@ -1,22 +1,64 @@
 ================================================================================
-                         ALIGNED HEART - PROGRESS TRACKER
+                  SHOSHANA POLANSKY, LMFT — SITE PROGRESS TRACKER
 ================================================================================
 
-Last Updated: 2026-01-25
+Last Updated: 2026-02-19
+
+Interim URL:  https://ptvans.github.io/shoshana/
+Final domain: https://www.shoshanapolansky.com/ (DNS pending)
+Blog:         https://blog.shoshanapolansky.com/ (planned)
+Repo:         ptvans/shoshana
 
 ================================================================================
 COMPLETED
 ================================================================================
 
-[x] Initial site creation and content
-[x] GitHub deployment setup
-[x] Services pages (English and Spanish)
-[x] About page modifications
-[x] Mobile-friendly hamburger menu navigation
-[x] Add simplified contact form to all pages (Home, About, Services, Servicios)
-    - Fields: name, email, phone, service type (individual/couples), comments
-    - Created reusable ContactForm component
-    - Added submitContactForm API function
+--- INITIAL BUILD ---
+[x] React + Vite project setup with GitHub Pages deployment (GitHub Actions)
+[x] SPA routing via BrowserRouter + 404.html redirect (rafgraph pattern)
+[x] Global design system: warm cream/terracotta palette, CSS custom properties
+[x] Fonts: Cormorant Garamond (headings) + Nunito Sans (body)
+[x] Fixed header with desktop nav + mobile hamburger menu
+[x] Logo banner component (below header)
+[x] ScrollToTop component (resets scroll on route change)
+[x] Footer with phone, location, schedule CTA
+
+--- PAGES ---
+[x] Home — hero, services overview, testimonials, about teaser, availability grid
+[x] About — bio, who I work with, EMDR section, CTA
+[x] Services (Therapy) — individual + couples, EMDR highlight, process, policies
+[x] Coaching — what is coaching, areas of focus, how it works, CTA
+[x] New Client / Contact — booking CTA, contact info, process steps, crisis resources
+
+--- CONTENT & NAVIGATION ---
+[x] Separated Therapy and Coaching into distinct pages
+[x] Home and Coaching added to nav
+[x] ContactForm replaced by embedded GoHighLevel/GReminders booking link
+[x] Logo moved to banner below header (LogoBanner component)
+[x] Logo size increased
+
+--- ADA / WCAG ACCESSIBILITY (Feb 2026) ---
+[x] Skip-to-content link — App.jsx + App.css (WCAG 2.4.1 A)
+[x] Removed outline:none from button rule — index.css (WCAG 2.4.7 AA)
+[x] Added *:focus-visible rule with 2px outline — index.css (WCAG 2.4.7 AA)
+[x] Darkened --text-secondary: #6B6B6B → #595959 — index.css (WCAG 1.4.3 AA)
+[x] Darkened a:hover color to #6B4F3A — index.css (WCAG 1.4.3 AA)
+[x] Home hero uses <h1> (not <p>) — verified correct (WCAG 1.3.1 A)
+[x] Hero image has descriptive alt text — verified correct (WCAG 1.1.1 A)
+
+--- SEO / ANSWER ENGINE OPTIMIZATION (Feb 2026) ---
+[x] index.html: descriptive <title> tag
+[x] index.html: meta description (155 chars)
+[x] index.html: meta keywords, author, robots
+[x] index.html: canonical URL (interim GitHub Pages URL)
+[x] index.html: Open Graph tags (og:type, url, title, description, site_name, locale)
+[x] index.html: Twitter Card tags
+[x] index.html: JSON-LD structured data — MedicalBusiness, Person, WebSite schema
+[x] public/robots.txt — allows all crawlers incl. GPTBot, ClaudeBot, PerplexityBot
+[x] public/sitemap.xml — all 5 pages with priorities
+[x] public/llms.txt — AI-readable practice summary for AEO
+[x] CNAME updated to www.shoshanapolansky.com (ready for domain switch)
+[x] Google Fonts import updated to include correct italic/weight variants
 
 ================================================================================
 IN PROGRESS
@@ -25,17 +67,62 @@ IN PROGRESS
 (none currently)
 
 ================================================================================
-TODO / BACKLOG
+TODO — DOMAIN MIGRATION (do when DNS is configured)
 ================================================================================
 
-- [ ] (Add tasks here as they come up)
+When pointing www.shoshanapolansky.com to GitHub Pages:
+
+[ ] vite.config.js: base '/shoshana/' → '/'
+[ ] src/App.jsx: remove basename="/shoshana" from <Router>
+[ ] index.html: update canonical + og:url to https://www.shoshanapolansky.com/
+[ ] public/robots.txt: update Sitemap URL
+[ ] public/sitemap.xml: update all <loc> URLs
+[ ] public/llms.txt: update website URL references
+[ ] Submit sitemap to Google Search Console
+[ ] Set up Google Business Profile
+
+================================================================================
+TODO — ACCESSIBILITY (WCAG AA remaining)
+================================================================================
+
+[ ] Fix link text color contrast: --primary-color #B8977E on cream bg ~2.5:1 (fails AA)
+    → Need dedicated accessible link color variable (target: ≥4.5:1 on #F7F3EF)
+[ ] Fix button text contrast: white on #B8977E ~2.7:1 (fails AA for small text)
+    → Consider darkening button bg or using a contrast-safe terracotta
+[ ] Verify Instagram icon links have aria-label + SVG aria-hidden
+[ ] Run full axe/WAVE audit on all 5 pages once deployed to final domain
+
+================================================================================
+TODO — SEO / AEO
+================================================================================
+
+[ ] Add page-level <title> and meta descriptions per route
+    (requires React Helmet, vite-plugin-react-pages, or SSG/SSR)
+[ ] Add FAQ JSON-LD schema to /services and /about pages
+[ ] Add og:image — designate a professional headshot as the social share image
+[ ] Google Business Profile linked to www.shoshanapolansky.com
+[ ] Google Search Console: verify domain + submit sitemap
+
+================================================================================
+TODO — FEATURES / CONTENT
+================================================================================
+
+[ ] Blog at blog.shoshanapolansky.com (platform TBD)
+[ ] Testimonials page or expanded testimonials section
+[ ] Resource library / psychoeducation content
+[ ] Calendar embed (if GReminders supports widget)
+[ ] GoHighLevel API activation (set VITE_GHL_API_KEY + VITE_GHL_LOCATION_ID)
 
 ================================================================================
 NOTES
 ================================================================================
 
-- Site is live at: www.youralignedheart.com
-- Demo mode is active (GoHighLevel API credentials not configured)
+- Booking: all CTAs link to https://app.greminders.com/c/shoshanapolansky
+- Session rate: $200 / 50 minutes
+- Insurance: out-of-network; superbills provided
+- Payment: cash, credit card, check, HSA, FSA
+- Crisis resources: 988 Lifeline referenced on /new-client page
+- GoHighLevel API is in demo mode (credentials not required for deploy)
 - Main branch is the deployment branch
 
 ================================================================================

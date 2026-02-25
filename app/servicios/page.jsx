@@ -1,5 +1,14 @@
 import ContactForm from '../components/ContactForm'
-import './Servicios.css'
+import './page.css'
+
+export const metadata = {
+  title: 'Servicios en Español',
+  description: 'Terapia en español para individuos y parejas. Especialidades en trauma, ansiedad, y relaciones.',
+  openGraph: {
+    title: 'Servicios en Español | Shoshana Polansky, LMFT',
+    description: 'Terapia en español para individuos y parejas. Especialidades en trauma, ansiedad, y relaciones.',
+  },
+}
 
 function Servicios() {
   return (
