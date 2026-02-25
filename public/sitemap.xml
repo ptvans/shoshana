@@ -16,6 +16,16 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://ptvans.github.io/shoshana/individual-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ptvans.github.io/shoshana/couples-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://ptvans.github.io/shoshana/coaching</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -24,5 +34,15 @@
     <loc>https://ptvans.github.io/shoshana/new-client</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptvans.github.io/shoshana/rates</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ptvans.github.io/shoshana/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

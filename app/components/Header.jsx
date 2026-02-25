@@ -63,6 +63,34 @@ function Header() {
               </Link>
             </li>
             <li>
+              <Link
+                href="/rates"
+                className={`nav-link ${pathname === '/rates' ? 'active' : ''}`}
+                onClick={handleLinkClick}
+              >
+                Rates
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/faq"
+                className={`nav-link ${pathname === '/faq' ? 'active' : ''}`}
+                onClick={handleLinkClick}
+              >
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://blog.shoshanapolansky.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link"
+              >
+                Blog
+              </a>
+            </li>
+            <li>
               <a
                 href="https://app.greminders.com/c/shoshanapolansky"
                 target="_blank"
@@ -106,6 +134,27 @@ function Header() {
                 <Link href="/coaching" className="mobile-nav-link" onClick={handleLinkClick}>
                   Coaching
                 </Link>
+              </li>
+              <li>
+                <Link href="/rates" className="mobile-nav-link" onClick={handleLinkClick}>
+                  Rates
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="mobile-nav-link" onClick={handleLinkClick}>
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://blog.shoshanapolansky.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mobile-nav-link"
+                  onClick={handleLinkClick}
+                >
+                  Blog
+                </a>
               </li>
               <li>
                 <a

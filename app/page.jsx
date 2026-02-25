@@ -69,7 +69,7 @@ function Home() {
                     Process trauma, manage anxiety, and break free from patterns
                     holding you back using EMDR and other evidence-based approaches.
                   </p>
-                  <Link href="/services" className="link-subtle">Learn more →</Link>
+                  <Link href="/individual-therapy" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
               <div className="service-item">
@@ -80,7 +80,7 @@ function Home() {
                     Improve communication, rebuild intimacy, and navigate
                     challenges together in a supportive environment.
                   </p>
-                  <Link href="/services" className="link-subtle">Learn more →</Link>
+                  <Link href="/couples-therapy" className="link-subtle">Learn more →</Link>
                 </div>
               </div>
               <div className="service-item">
@@ -95,49 +95,6 @@ function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="testimonials-section">
-        <div className="container">
-          <h2>What people are saying...</h2>
-          <div className="testimonials-grid">
-            <div className="testimonial-card">
-              <p>
-                &ldquo;EMDR changed everything for me. Memories that used to send me
-                into a panic now feel like they belong in the past, where they
-                should be. I finally feel like I can move forward.&rdquo;
-              </p>
-              <cite>— Trauma therapy client</cite>
-            </div>
-            <div className="testimonial-card">
-              <p>
-                &ldquo;We came in barely communicating. Now we actually hear each other
-                and have tools to work through conflict instead of avoiding it.
-                Our relationship feels alive again.&rdquo;
-              </p>
-              <cite>— Couples therapy client</cite>
-            </div>
-            <div className="testimonial-card">
-              <p>
-                &ldquo;I spent years taking care of everyone else. Shoshana helped me
-                understand why I struggled to ask for what I needed—and gave me
-                the tools to finally change that pattern.&rdquo;
-              </p>
-              <cite>— Individual therapy client</cite>
-            </div>
-          </div>
-          <div className="testimonials-cta">
-            <a
-              href="https://app.greminders.com/c/shoshanapolansky"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline"
-            >
-              Schedule a Free Consultation
-            </a>
           </div>
         </div>
       </section>

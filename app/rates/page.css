@@ -1,0 +1,77 @@
+/* Rates Hero */
+.rates-hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.rates-hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.rates-intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Rates Grid */
+.rates-main {
+  padding: 5rem 0;
+}
+
+.rates-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.rate-item {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rate-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.rate-item h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-sans);
+}
+
+.rate-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA */
+.rates-cta-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.rates-cta p {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .rates-hero h1 {
+    font-size: 2.25rem;
+  }
+}

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './page.css'
 
 export const metadata = {
@@ -42,6 +43,7 @@ function Services() {
                   <li>Online throughout the US</li>
                 </ul>
               </div>
+              <Link href="/individual-therapy" className="link-subtle">Learn more →</Link>
             </div>
 
             <div className="service-card">
@@ -59,6 +61,7 @@ function Services() {
                   <li>Online throughout the US</li>
                 </ul>
               </div>
+              <Link href="/couples-therapy" className="link-subtle">Learn more →</Link>
             </div>
           </div>
         </div>
@@ -121,42 +124,6 @@ function Services() {
         </div>
       </section>
 
-      {/* Policies */}
-      <section className="policies-section">
-        <div className="container-narrow">
-          <h2>Policies</h2>
-          <div className="policies-grid">
-            <div className="policy-item">
-              <h3>Rates</h3>
-              <p>
-                Individual sessions are $200 for a 50-minute session.
-                Please contact me if you have any questions about rates.
-              </p>
-            </div>
-            <div className="policy-item">
-              <h3>Payment</h3>
-              <p>
-                I accept cash, credit card, check, HSA accounts, and FSA accounts.
-                Payment is collected at the time of service.
-              </p>
-            </div>
-            <div className="policy-item">
-              <h3>Insurance</h3>
-              <p>
-                I am an out-of-network provider and offer superbills for
-                reimbursement from your insurance company.
-              </p>
-            </div>
-            <div className="policy-item">
-              <h3>Cancellations</h3>
-              <p>
-                Please provide at least 24 hours notice for cancellations to avoid
-                being charged the full session fee.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

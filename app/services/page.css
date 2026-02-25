@@ -98,6 +98,20 @@
   left: 0;
 }
 
+.service-card .link-subtle {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.service-card .link-subtle:hover {
+  transform: translateX(4px);
+}
+
 /* EMDR Highlight Section */
 .emdr-highlight-section {
   padding: 5rem 0;

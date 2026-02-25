@@ -1,0 +1,184 @@
+/* Individual Therapy Hero */
+.it-hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.it-hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.it-intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* What to Expect */
+.it-expect {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.it-expect h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.it-expect p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Specialties */
+.it-specialties {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.it-specialties h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.specialties-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.specialties-list li {
+  color: var(--text-primary);
+  padding: 0.5rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+  font-size: 1.0625rem;
+}
+
+.specialties-list li::before {
+  content: "\2713";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+}
+
+/* EMDR Section */
+.it-emdr {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.it-emdr h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.it-emdr > .container-narrow > p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+
+.emdr-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.emdr-benefits-list li {
+  color: var(--text-primary);
+  padding: 0.5rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.emdr-benefits-list li::before {
+  content: "\2713";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+}
+
+/* Availability */
+.it-availability {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.it-availability h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.it-availability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.it-availability-item h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.it-availability-item p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Getting Started */
+.it-getting-started {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.it-getting-started h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.it-cta {
+  margin-top: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .it-availability-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .it-hero h1 {
+    font-size: 2.25rem;
+  }
+}
