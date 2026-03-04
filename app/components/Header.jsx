@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import logo from '../../src/photos/shoshana/logo-new.png'
+import logo from '../../src/photos/shoshana/Logo-header.png'
 import './Header.css'
 
 function Header() {
