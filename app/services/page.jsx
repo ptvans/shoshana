@@ -24,45 +24,55 @@ function Services() {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Focus Areas */}
       <section className="services-main section-alt">
         <div className="container">
-          <div className="services-grid services-grid-two">
-            <div className="service-card">
-              <span className="service-num">01</span>
-              <h2>Individual Therapy</h2>
+          <h2 className="focus-areas-heading">Focus Areas</h2>
+          <div className="focus-cards-grid">
+            <Link href="/trauma-therapy" className="focus-card">
+              <h3>Trauma Therapy &amp; EMDR</h3>
               <p>
-                One-on-one therapy for trauma, anxiety, depression, and relationship
-                patterns. Using EMDR and other evidence-based approaches, we&#39;ll work
-                together to process difficult experiences and create lasting change.
+                Heal from PTSD, childhood trauma, and abuse with EMDR and
+                evidence-based trauma treatment.
               </p>
-              <div className="service-details">
-                <p><strong>Available:</strong></p>
-                <ul>
-                  <li>In-person in California & Florida</li>
-                  <li>Online throughout the US</li>
-                </ul>
-              </div>
-              <Link href="/individual-therapy" className="link-subtle">Learn more →</Link>
-            </div>
+              <span className="link-subtle">Learn more &#8594;</span>
+            </Link>
 
-            <div className="service-card">
-              <span className="service-num">02</span>
-              <h2>Couples Therapy</h2>
+            <Link href="/dating-relationship-therapy" className="focus-card">
+              <h3>Dating &amp; Relationships</h3>
               <p>
-                For couples ready to improve communication, rebuild intimacy, and
-                break destructive patterns. Whether you&#39;re navigating conflict,
-                disconnection, or exploring relationship structures like non-monogamy.
+                Break unhealthy patterns, get over an ex, and recover from
+                toxic or abusive relationships.
               </p>
-              <div className="service-details">
-                <p><strong>Available:</strong></p>
-                <ul>
-                  <li>In-person in California & Florida</li>
-                  <li>Online throughout the US</li>
-                </ul>
-              </div>
-              <Link href="/couples-therapy" className="link-subtle">Learn more →</Link>
-            </div>
+              <span className="link-subtle">Learn more &#8594;</span>
+            </Link>
+
+            <Link href="/therapy-for-high-achievers" className="focus-card">
+              <h3>Therapy for High Achievers</h3>
+              <p>
+                For driven, successful people carrying the weight of trauma,
+                childhood abuse, or emotionally immature parents.
+              </p>
+              <span className="link-subtle">Learn more &#8594;</span>
+            </Link>
+
+            <Link href="/ocd-therapy" className="focus-card">
+              <h3>OCD &amp; Intrusive Thoughts</h3>
+              <p>
+                Specialized treatment using Inference-Based CBT and exposure
+                therapy for rumination and compulsive patterns.
+              </p>
+              <span className="link-subtle">Learn more &#8594;</span>
+            </Link>
+
+            <Link href="/couples-therapy" className="focus-card">
+              <h3>Couples Therapy</h3>
+              <p>
+                Rebuild communication, deepen intimacy, and navigate conflict
+                using EFT and Gottman methods.
+              </p>
+              <span className="link-subtle">Learn more &#8594;</span>
+            </Link>
           </div>
         </div>
       </section>

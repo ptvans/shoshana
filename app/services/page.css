@@ -112,6 +112,63 @@
   transform: translateX(4px);
 }
 
+/* Focus Areas Cards */
+.focus-areas-heading {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.focus-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.focus-card {
+  background: var(--background-card);
+  padding: 2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.focus-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: inherit;
+}
+
+.focus-card h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.focus-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.focus-card .link-subtle {
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.focus-card:hover .link-subtle {
+  transform: translateX(4px);
+}
+
 /* EMDR Highlight Section */
 .emdr-highlight-section {
   padding: 5rem 0;
@@ -263,9 +320,19 @@
     gap: 1.5rem;
   }
 
+  .focus-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .steps-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .focus-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
 

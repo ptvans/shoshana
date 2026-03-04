@@ -58,7 +58,7 @@ const jsonLd = {
       description: 'Licensed Marriage and Family Therapist specializing in trauma therapy (EMDR), couples counseling, and relationship coaching. Serving clients in California, Florida, and online nationwide.',
       url: 'https://www.shoshanapolansky.com/',
       telephone: '+18588637270',
-      priceRange: '$200 per session',
+      priceRange: '$240 per session',
       medicalSpecialty: [
         'Trauma Therapy',
         'EMDR',
@@ -151,10 +151,10 @@ export default function RootLayout({ children }) {
         <div className="app">
           <a href="#main-content" className="skip-link">Skip to main content</a>
           <Header />
-          <LogoBanner />
           <main className="main-content" id="main-content">
             {children}
           </main>
+          <LogoBanner />
           <Footer />
         </div>
       </body>

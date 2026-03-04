@@ -120,6 +120,31 @@ shoshana/
 
 ---
 
+## Focus Areas & Content Modules
+
+These focus areas define the five populations Shoshana serves and their therapeutic needs. They will be used to create reusable content modules that appear across multiple pages (Individual Therapy, Couples Therapy, and related landing pages) to optimize for SEO.
+
+### Individual Therapy
+
+#### 1. Trauma
+**Approach:** EMDR, therapy for PTSD, rapid therapy
+
+#### 2. Dating Issues
+**Approach:** Direct and blunt therapy, can't get over my ex, domestic violence, abusive relationship, narcissistic abuse
+
+#### 3. High Achiever with Trauma History
+**Approach:** Therapy for smart people, therapy for successful people, therapy for sexual abuse, parental abuse, children of immature parents
+
+#### 4. OCD
+**Approach:** Inference-Based Cognitive Behavioral Therapy (I-CBT), exposure therapy, therapy for rumination and intrusive thoughts
+
+### Couples Therapy
+
+#### 5. Relationship Counseling
+**Approach:** EFT (Emotionally Focused Therapy), Gottman therapy
+
+---
+
 ## Design System
 
 ### Color Palette

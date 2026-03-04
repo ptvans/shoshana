@@ -6,6 +6,7 @@
 
 .main-content {
   flex: 1;
+  margin-top: 60px; /* Account for fixed header height */
 }
 
 /* Skip to main content — visually hidden until focused (WCAG 2.4.1) */

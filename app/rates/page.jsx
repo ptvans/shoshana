@@ -29,7 +29,8 @@ function Rates() {
             <div className="rate-item">
               <h3>Rates</h3>
               <p>
-                Individual sessions are $200 for a 50-minute session.
+                Individual sessions are $240 for a 50-minute session.
+                Couples sessions are $360 for a 50-minute session.
                 Please contact me if you have any questions about rates.
               </p>
             </div>

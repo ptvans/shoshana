@@ -1,151 +1,163 @@
 import Link from 'next/link'
-import './page.css'
+import LandingFaqSection from '../components/LandingFaqSection'
+import '../components/landing-page.css'
 
 export const metadata = {
-  title: 'Couples Therapy | Communication, Intimacy & Conflict Resolution',
-  description: 'Couples therapy to improve communication, rebuild intimacy, and resolve conflict. Inclusive of all relationship structures. In-person in California & Florida, online nationwide.',
+  title: 'Couples Therapy & Relationship Counseling',
+  description: 'Couples therapy to rebuild communication, deepen intimacy, and resolve conflict using EFT and Gottman methods. Inclusive of all relationship structures. In-person in California & Florida, online nationwide.',
   openGraph: {
-    title: 'Couples Therapy | Communication, Intimacy & Conflict Resolution',
-    description: 'Couples therapy to improve communication, rebuild intimacy, and resolve conflict. Inclusive of all relationship structures. In-person in California & Florida, online nationwide.',
+    title: 'Couples Therapy & Relationship Counseling | Shoshana Polansky, LMFT',
+    description: 'Couples therapy to rebuild communication, deepen intimacy, and resolve conflict using EFT and Gottman methods. Inclusive of all relationship structures.',
   },
 }
 
+const faqs = [
+  {
+    question: 'Do both partners need to want therapy for it to work?',
+    answer: 'Ideally, yes \u2014 but it\u2019s common for one partner to be more enthusiastic than the other. What matters is that both of you are willing to show up and participate honestly. Many reluctant partners find the process more useful than they expected once they experience the first session.',
+  },
+  {
+    question: 'What if we\u2019re not sure we want to stay together?',
+    answer: 'That\u2019s okay. Couples therapy isn\u2019t about forcing a relationship to work \u2014 it\u2019s about helping you get clarity. Sometimes that means rebuilding and strengthening the relationship. Sometimes it means realizing you\u2019re better apart. Either way, therapy can help you make that decision with honesty and respect.',
+  },
+  {
+    question: 'Do you work with non-traditional relationship structures?',
+    answer: 'Absolutely. I work with couples in all types of relationships \u2014 including polyamorous, open, and non-monogamous partnerships. My approach is inclusive, nonjudgmental, and focused on what works for your specific relationship.',
+  },
+  {
+    question: 'How is couples therapy different from individual therapy?',
+    answer: 'In couples therapy, the relationship is the client. We focus on the patterns between you \u2014 communication styles, conflict cycles, attachment dynamics \u2014 rather than individual issues. That said, I may recommend individual sessions alongside couples work if deeper personal issues are affecting the relationship.',
+  },
+]
+
 function CouplesTherapy() {
   return (
-    <div className="couples-therapy-page">
+    <div className="landing-page">
       {/* Hero */}
-      <section className="ct-hero">
+      <section className="lp-hero">
         <div className="container">
-          <h1>Couples Therapy</h1>
-          <p className="ct-intro">
+          <h1>Couples Therapy &amp; Relationship Counseling</h1>
+          <p className="lp-hero-intro">
             Rebuild connection, improve communication, and create the
-            relationship you both deserve.
+            relationship you both deserve. Whether you&#39;re in crisis or
+            just want to be better together, therapy can help.
+          </p>
+          <a
+            href="https://app.greminders.com/c/shoshanapolansky"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Schedule a Free Consultation
+          </a>
+        </div>
+      </section>
+
+      {/* Do You Recognize Yourself? */}
+      <section className="lp-recognize section-alt">
+        <div className="container-narrow">
+          <h2>Do You Recognize Yourselves?</h2>
+          <ul className="lp-recognize-list">
+            <li>The same arguments keep coming up, and nothing ever gets resolved</li>
+            <li>You feel more like roommates than partners</li>
+            <li>One or both of you has been unfaithful, and you&#39;re not sure how to move forward</li>
+            <li>You avoid difficult conversations because they always escalate</li>
+            <li>Intimacy — emotional or physical — has faded and you don&#39;t know how to get it back</li>
+            <li>You&#39;re considering separation but want to try everything before making that decision</li>
+            <li>You&#39;re navigating a major transition — engagement, new baby, blended family, or open relationship</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* How I Can Help */}
+      <section className="lp-help">
+        <div className="container-narrow">
+          <h2>How I Can Help</h2>
+          <p>
+            I use Emotionally Focused Therapy (EFT) and Gottman methods —
+            two of the most researched and effective approaches to couples
+            therapy. EFT helps you understand the attachment dynamics beneath
+            your conflict, while Gottman methods provide concrete communication
+            tools and strategies for rebuilding trust.
+          </p>
+          <p>
+            My style is active and engaged. I won&#39;t just sit back and let
+            you argue in circles. I&#39;ll help you see the patterns driving
+            your disconnection, interrupt destructive cycles in real time, and
+            guide you toward new ways of relating to each other.
+          </p>
+          <p>
+            I work with couples at every stage — from premarital counseling
+            to relationships in crisis — and I&#39;m inclusive of all relationship
+            structures, including non-monogamous and polyamorous partnerships.
           </p>
         </div>
       </section>
 
       {/* What to Expect */}
-      <section className="ct-expect section-alt">
+      <section className="lp-expect section-alt">
         <div className="container-narrow">
           <h2>What to Expect</h2>
           <p>
-            Couples therapy provides a structured, supportive space where
-            both partners can be heard. Together, we&#39;ll identify the patterns
-            driving conflict or disconnection and develop new ways to communicate,
-            connect, and support each other.
+            We&#39;ll begin with an initial session where both partners share
+            their perspective, followed by individual check-ins with each of
+            you. From there, I&#39;ll develop a treatment plan focused on your
+            specific goals — whether that&#39;s improving communication,
+            rebuilding trust, or deepening intimacy.
           </p>
           <p>
-            Whether you&#39;re navigating a specific challenge or looking to
-            strengthen your relationship overall, I work with couples at every
-            stage—including those exploring non-traditional relationship structures.
+            Sessions are 50 minutes and available both in-person and online.
+            Many couples start with weekly sessions and transition to
+            biweekly as they build new skills and patterns.
           </p>
         </div>
       </section>
 
-      {/* Areas of Focus */}
-      <section className="ct-focus">
+      {/* FAQ */}
+      <section className="lp-faq">
         <div className="container">
-          <h2>Areas of Focus</h2>
-          <div className="ct-focus-grid">
-            <div className="ct-focus-card">
-              <span className="ct-focus-num">01</span>
-              <h3>Communication</h3>
-              <p>
-                Learn to express needs clearly, listen without defensiveness,
-                and have productive conversations—even about difficult topics.
-              </p>
-            </div>
-            <div className="ct-focus-card">
-              <span className="ct-focus-num">02</span>
-              <h3>Intimacy & Connection</h3>
-              <p>
-                Rebuild emotional and physical closeness that may have been
-                lost over time, rediscovering what brought you together.
-              </p>
-            </div>
-            <div className="ct-focus-card">
-              <span className="ct-focus-num">03</span>
-              <h3>Conflict Resolution</h3>
-              <p>
-                Break destructive argument cycles and develop healthier ways
-                to navigate disagreements and repair after conflict.
-              </p>
-            </div>
-            <div className="ct-focus-card">
-              <span className="ct-focus-num">04</span>
-              <h3>Non-Monogamy</h3>
-              <p>
-                Navigate open relationships, polyamory, or other relationship
-                structures with clear communication and intentionality.
-              </p>
-            </div>
-            <div className="ct-focus-card">
-              <span className="ct-focus-num">05</span>
-              <h3>Premarital Counseling</h3>
-              <p>
-                Build a strong foundation before marriage by addressing
-                expectations, values, and potential areas of conflict.
-              </p>
-            </div>
-            <div className="ct-focus-card">
-              <span className="ct-focus-num">06</span>
-              <h3>Trust & Betrayal</h3>
-              <p>
-                Work through infidelity or broken trust with guided support
-                to determine the path forward—together or apart.
-              </p>
-            </div>
-          </div>
+          <h2>Frequently Asked Questions</h2>
+          <LandingFaqSection faqs={faqs} />
         </div>
       </section>
 
       {/* Availability */}
-      <section className="ct-availability section-alt">
-        <div className="container">
-          <h2>How We Can Work Together</h2>
-          <div className="ct-availability-grid">
-            <div className="ct-availability-item">
-              <h3>In-Person</h3>
-              <p>California & Florida</p>
-            </div>
-            <div className="ct-availability-item">
-              <h3>Online</h3>
-              <p>Available throughout the US</p>
-            </div>
-          </div>
+      <section className="lp-availability section-alt">
+        <div className="container-narrow">
+          <h2>Where I See Couples</h2>
+          <p>
+            I offer in-person couples therapy in California and Florida,
+            serving couples in the Los Angeles area, Santa Barbara, and the
+            San Francisco Bay Area. Online couples therapy is available
+            throughout the United States — from SoCal to NorCal and everywhere
+            in between.
+          </p>
         </div>
       </section>
 
-      {/* Getting Started */}
-      <section className="ct-getting-started">
+      {/* Final CTA */}
+      <section className="lp-final-cta">
         <div className="container">
-          <h2>How to Get Started</h2>
-          <div className="steps-grid">
-            <div className="step-item">
-              <span className="step-num">1</span>
-              <h3>Free Consultation</h3>
-              <p>Schedule a brief call to discuss what you&#39;re experiencing and see if we&#39;re a good fit.</p>
-            </div>
-            <div className="step-item">
-              <span className="step-num">2</span>
-              <h3>Book Your First Session</h3>
-              <p>Choose a time that works for both of you—in-person or online.</p>
-            </div>
-            <div className="step-item">
-              <span className="step-num">3</span>
-              <h3>Begin Your Journey</h3>
-              <p>Start building the relationship and connection you both deserve.</p>
-            </div>
-          </div>
-          <div className="ct-cta">
-            <a
-              href="https://app.greminders.com/c/shoshanapolansky"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Schedule a Consultation
-            </a>
+          <h2>Ready to take the first step together?</h2>
+          <p>
+            Your relationship is worth fighting for. Schedule a free
+            15-minute consultation to discuss what you&#39;re going through
+            and how couples therapy can help.
+          </p>
+          <a
+            href="https://app.greminders.com/c/shoshanapolansky"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Schedule Your Free Consultation
+          </a>
+          <div className="lp-links">
+            <p>
+              <Link href="/services">All Therapy Services</Link> &#183;{' '}
+              <Link href="/about">About Shoshana</Link> &#183;{' '}
+              <Link href="/dating-relationship-therapy">Dating &amp; Relationship Therapy</Link>
+            </p>
           </div>
         </div>
       </section>

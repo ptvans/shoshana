@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import logo from '../../src/photos/shoshana/logo-new.png'
 import './Header.css'
 
 function Header() {
@@ -25,6 +26,9 @@ function Header() {
     <header className="header">
       <div className="container">
         <nav className="nav">
+          <Link href="/" className="nav-logo-link" onClick={handleLinkClick}>
+            <img src={logo.src} alt="Shoshana Polansky - Home" className="nav-logo" />
+          </Link>
           <ul className="nav-links">
             <li>
               <Link

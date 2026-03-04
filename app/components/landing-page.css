@@ -1,0 +1,252 @@
+/* ===== Shared Landing Page Styles ===== */
+/* All focus area pages use these .lp- prefixed classes */
+
+/* Hero */
+.lp-hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.lp-hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.lp-hero-intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.lp-hero .btn-primary {
+  margin-top: 0.5rem;
+}
+
+/* Recognize Section */
+.lp-recognize {
+  padding: 5rem 0;
+}
+
+.lp-recognize h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.lp-recognize-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.lp-recognize-list li {
+  color: var(--text-secondary);
+  padding: 0.6rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+  line-height: 1.7;
+}
+
+.lp-recognize-list li::before {
+  content: "\2022";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* How I Can Help */
+.lp-help {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.lp-help h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.lp-help p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+
+/* What to Expect */
+.lp-expect {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.lp-expect h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.lp-expect p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+
+/* FAQ Section */
+.lp-faq {
+  padding: 5rem 0;
+}
+
+.lp-faq h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.lp-faq-accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.lp-faq-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lp-faq-item:first-child {
+  border-top: 1px solid var(--border-color);
+}
+
+.lp-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  gap: 1rem;
+}
+
+.lp-faq-question:hover {
+  color: var(--primary-dark);
+}
+
+.lp-faq-chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--primary-color);
+}
+
+.lp-faq-item.open .lp-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.lp-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.lp-faq-item.open .lp-faq-answer {
+  max-height: 300px;
+}
+
+.lp-faq-answer p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  padding-bottom: 1.25rem;
+}
+
+/* Availability */
+.lp-availability {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.lp-availability h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.lp-availability p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 1rem;
+}
+
+/* Final CTA */
+.lp-final-cta {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.lp-final-cta h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.lp-final-cta p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+
+/* Internal Links */
+.lp-links {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.lp-links p {
+  font-size: 0.9375rem;
+}
+
+.lp-links a {
+  font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .lp-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .lp-hero-intro {
+    font-size: 1rem;
+  }
+
+  .lp-recognize,
+  .lp-help,
+  .lp-expect,
+  .lp-faq,
+  .lp-availability,
+  .lp-final-cta {
+    padding: 3.5rem 0;
+  }
+}
