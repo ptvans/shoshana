@@ -28,8 +28,7 @@ function About() {
               <div className="about-badges">
                 <span className="about-badge">LMFT, Licensed Marriage &amp; Family Therapist</span>
                 <span className="about-badge about-badge-accent">&#10003; Accepting New Clients</span>
-                <span className="about-badge">&#9745; Telehealth</span>
-                <span className="about-badge">&#9745; In-Person</span>
+                <span className="about-badge">&#9745; Online / Telehealth</span>
               </div>
               <h1>Shoshana Polansky</h1>
               <p className="about-pronouns">she/her</p>
@@ -128,14 +127,10 @@ function About() {
                   <span className="info-card-label">Availability</span>
                   <div className="info-card-items">
                     <span className="info-card-icon-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                      In-Person Sessions
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                      Online / Telehealth
                     </span>
                     <span className="info-card-detail">Los Angeles &middot; San Francisco</span>
-                    <span className="info-card-icon-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                      Video / Telehealth
-                    </span>
                   </div>
                 </div>
               </div>
