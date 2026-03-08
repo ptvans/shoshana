@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import healingFromTrauma from '../../src/images/healing-from-trauma.jpg'
 import LandingFaqSection from '../components/LandingFaqSection'
 import '../components/landing-page.css'
 
@@ -53,8 +54,30 @@ function TraumaTherapy() {
         </div>
       </section>
 
+      {/* Feature Section */}
+      <section className="lp-feature section-alt">
+        <div className="container-narrow">
+          <div className="lp-feature-layout">
+            <div className="lp-feature-image">
+              <img src={healingFromTrauma.src} alt="Misty mountain landscape symbolizing the journey of healing" />
+            </div>
+            <div className="lp-feature-content">
+              <h2>Are you healing from trauma?</h2>
+              <p>
+                You had a chaotic childhood, or are overcoming an incident that
+                threw you for a loop. Sometimes people aren&#39;t even aware what
+                they experienced was traumatic. You might have symptoms like
+                panic attacks, anxiety, binge eating &#8211; the list goes on.
+                We can work together using a highly effective tool called EMDR
+                to help you heal as fast as possible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Do You Recognize Yourself? */}
-      <section className="lp-recognize section-alt">
+      <section className="lp-recognize">
         <div className="container-narrow">
           <h2>Do You Recognize Yourself?</h2>
           <ul className="lp-recognize-list">

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import beingTheRock from '../../src/images/being-the-rock-for-others.jpg'
 import LandingFaqSection from '../components/LandingFaqSection'
 import '../components/landing-page.css'
 
@@ -53,8 +54,29 @@ function DatingRelationshipTherapy() {
         </div>
       </section>
 
+      {/* Feature Section */}
+      <section className="lp-feature section-alt">
+        <div className="container-narrow">
+          <div className="lp-feature-layout">
+            <div className="lp-feature-image">
+              <img src={beingTheRock.src} alt="Group of friends laughing together outdoors" />
+            </div>
+            <div className="lp-feature-content">
+              <h2>Are you the rock for everyone around you?</h2>
+              <p>
+                I help people who feel stuck in their relationships &#8211;
+                always stable, strong, and helpful but unable to get their
+                needs met. You love your strength, but wondering if life is
+                becoming too stressful and you&#39;re unsure of how to make
+                changes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Do You Recognize Yourself? */}
-      <section className="lp-recognize section-alt">
+      <section className="lp-recognize">
         <div className="container-narrow">
           <h2>Do You Recognize Yourself?</h2>
           <ul className="lp-recognize-list">

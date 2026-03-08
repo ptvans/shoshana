@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import highAchieverHiking from '../../src/images/high-achiever-hiking.jpg'
 import LandingFaqSection from '../components/LandingFaqSection'
 import '../components/landing-page.css'
 
@@ -53,8 +54,31 @@ function TherapyForHighAchievers() {
         </div>
       </section>
 
+      {/* Feature Section */}
+      <section className="lp-feature section-alt">
+        <div className="container-narrow">
+          <div className="lp-feature-layout">
+            <div className="lp-feature-image">
+              <img src={highAchieverHiking.src} alt="Woman standing on a mountain summit overlooking a vast landscape" />
+            </div>
+            <div className="lp-feature-content">
+              <h2>You&#39;ve conquered everything except this</h2>
+              <p>
+                You&#39;re the one everyone leans on. You&#39;ve built a career,
+                handled your business, and kept it all together &#8211; but
+                underneath the success, something still doesn&#39;t feel right.
+                Maybe it&#39;s the childhood you never fully dealt with, or the
+                feeling that no matter how much you achieve, it&#39;s never
+                enough. You don&#39;t need generic self-care advice. You need
+                someone who gets it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Do You Recognize Yourself? */}
-      <section className="lp-recognize section-alt">
+      <section className="lp-recognize">
         <div className="container-narrow">
           <h2>Do You Recognize Yourself?</h2>
           <ul className="lp-recognize-list">

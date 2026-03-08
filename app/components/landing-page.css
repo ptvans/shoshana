@@ -26,6 +26,37 @@
   margin-top: 0.5rem;
 }
 
+/* Feature Section (image + text below hero) */
+.lp-feature {
+  padding: 5rem 0;
+}
+
+.lp-feature-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.lp-feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.lp-feature-content h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+
+.lp-feature-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
 /* Recognize Section */
 .lp-recognize {
   padding: 5rem 0;
@@ -241,6 +272,16 @@
     font-size: 1rem;
   }
 
+  .lp-feature-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .lp-feature-content {
+    text-align: center;
+  }
+
+  .lp-feature,
   .lp-recognize,
   .lp-help,
   .lp-expect,

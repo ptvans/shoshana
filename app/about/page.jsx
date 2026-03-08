@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import shoshanaPortrait from '../../src/photos/shoshana/Shoshana-portrait.jpg'
-import shoshanaSitting from '../../src/photos/shoshana/Shoshsna-Sitting.jpg'
 import './page.css'
 
 export const metadata = {
@@ -184,40 +183,30 @@ function About() {
       {/* My Approach to Therapy */}
       <section className="approach-section">
         <div className="container-narrow">
-          <h2>My Approach to Therapy</h2>
+          <h2>Therapy and coaching for individuals, families, and couples.</h2>
           <div className="approach-content">
             <p>
-              I believe therapy works best when it&#39;s a true collaboration.
-              You&#39;re the expert on your own life&#8212;you know your
-              experiences, your struggles, and your hopes better than anyone. My
-              role is to bring clinical expertise, evidence-based techniques, and
-              genuine care to help you understand patterns, develop new skills,
-              and create meaningful change.
+              Are you a driven person who is finding yourself stuck and upset about 
+              your relationship with your partner, your family or your dating life? 
+              From anxiety management to healthy communication to healing from trauma, 
+              we can work together toward your goals.
             </p>
             <p>
-              I don&#39;t focus on one specific type of therapy&#8212;I choose an
-              approach tailored to your needs. For trauma, I use EMDR (Eye
-              Movement Desensitization and Reprocessing), a type of therapy that
-              people find rapidly transformative. Clients move on from upsetting
-              or blocking memories and free themselves from anxiety and
-              self-doubt.
+              I specialize in helping people create better relationships and clear 
+              obstacles to those relationships: I help couples dealing with 
+              communication issues, differences in desire and problems with intimacy, 
+              navigating non-monogamous relationships and people that are finding 
+              themselves stressed out and confused by dating.
             </p>
             <p>
-              For couples, I use Emotionally Focused Therapy (EFT) and the
-              Gottman Method to help partners dealing with communication issues,
-              differences in desire, problems with intimacy, and navigating
-              non-monogamous relationships.
+              I don’t focus on one specific type of therapy – I choose an approach to 
+              therapy tailored to your needs. That can include EMDR – a type of 
+              therapy that people find rapidly transformative in healing from trauma. 
+              Clients move on from upsetting or blocking memories and free themselves 
+              from anxiety and self-doubt. 
             </p>
             <p>
-              For OCD and intrusive thoughts, I use Inference-Based Cognitive
-              Behavioral Therapy (I-CBT) and exposure therapy&#8212;evidence-based
-              approaches that help you develop a different relationship with
-              your thoughts and reclaim control.
-            </p>
-            <p>
-              Every person is different, so I tailor my approach to your unique
-              needs, goals, and preferences. Therapy isn&#39;t one-size-fits-all,
-              and I&#39;m committed to finding what works for you.
+              Get in touch and we can discuss what might work for you.
             </p>
           </div>
           <div className="treatment-tags">
@@ -260,7 +249,7 @@ function About() {
             </p>
           </div>
           <div className="story-image">
-            <img src={shoshanaSitting.src} alt="Shoshana Polansky in a relaxed setting" />
+            <img src={shoshanaPortrait.src} alt="Shoshana Polansky in a relaxed setting" />
           </div>
         </div>
       </section>

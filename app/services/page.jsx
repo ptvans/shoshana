@@ -1,4 +1,10 @@
 import Link from 'next/link'
+import healingFromTrauma from '../../src/images/healing-from-trauma.jpg'
+import beingTheRock from '../../src/images/being-the-rock-for-others.jpg'
+import highAchieverHiking from '../../src/images/high-achiever-hiking.jpg'
+import ocdRumination from '../../src/images/OCD-rumination-looking-out-window.jpg'
+import relationshipCounseling from '../../src/images/relationship-counseling.jpg'
+import '../../app/page.css'
 import './page.css'
 
 export const metadata = {
@@ -28,51 +34,66 @@ function Services() {
       <section className="services-main section-alt">
         <div className="container">
           <h2 className="focus-areas-heading">Focus Areas</h2>
-          <div className="focus-cards-grid">
-            <Link href="/trauma-therapy" className="focus-card">
-              <h3>Trauma Therapy &amp; EMDR</h3>
-              <p>
-                Heal from PTSD, childhood trauma, and abuse with EMDR and
-                evidence-based trauma treatment.
-              </p>
-              <span className="link-subtle">Learn more &#8594;</span>
-            </Link>
+          <div className="focus-areas-grid">
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={healingFromTrauma.src} alt="Misty mountain landscape symbolizing the journey of healing from trauma" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>Trauma &amp; PTSD</h3>
+                <p>
+                  Heal from PTSD, childhood trauma, and abuse with EMDR and
+                  evidence-based trauma treatment.
+                </p>
+                <Link href="/trauma-therapy" className="link-subtle">Learn more &#8594;</Link>
+              </div>
+            </div>
 
-            <Link href="/dating-relationship-therapy" className="focus-card">
-              <h3>Dating &amp; Relationships</h3>
-              <p>
-                Break unhealthy patterns, get over an ex, and recover from
-                toxic or abusive relationships.
-              </p>
-              <span className="link-subtle">Learn more &#8594;</span>
-            </Link>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={beingTheRock.src} alt="Group of friends laughing together outdoors" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>Dating &amp; Relationships</h3>
+                <p>
+                  Break unhealthy patterns, get over an ex, and recover from
+                  toxic or abusive relationships.
+                </p>
+                <Link href="/dating-relationship-therapy" className="link-subtle">Learn more &#8594;</Link>
+              </div>
+            </div>
 
-            <Link href="/therapy-for-high-achievers" className="focus-card">
-              <h3>Therapy for High Achievers</h3>
-              <p>
-                For driven, successful people carrying the weight of trauma,
-                childhood abuse, or emotionally immature parents.
-              </p>
-              <span className="link-subtle">Learn more &#8594;</span>
-            </Link>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={highAchieverHiking.src} alt="Woman standing on a mountain summit overlooking a vast landscape" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>High Achievers with Trauma</h3>
+                <p>
+                  For driven, successful people carrying the weight of trauma,
+                  childhood abuse, or emotionally immature parents.
+                </p>
+                <Link href="/therapy-for-high-achievers" className="link-subtle">Learn more &#8594;</Link>
+              </div>
+            </div>
 
-            <Link href="/ocd-therapy" className="focus-card">
-              <h3>OCD &amp; Intrusive Thoughts</h3>
-              <p>
-                Specialized treatment using Inference-Based CBT and exposure
-                therapy for rumination and compulsive patterns.
-              </p>
-              <span className="link-subtle">Learn more &#8594;</span>
-            </Link>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={ocdRumination.src} alt="Woman looking out a window, reflecting among trees" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>OCD &amp; Intrusive Thoughts</h3>
+                <p>
+                  Specialized treatment using Inference-Based CBT and exposure
+                  therapy for rumination and compulsive patterns.
+                </p>
+                <Link href="/ocd-therapy" className="link-subtle">Learn more &#8594;</Link>
+              </div>
+            </div>
 
-            <Link href="/couples-therapy" className="focus-card">
-              <h3>Couples Therapy</h3>
-              <p>
-                Rebuild communication, deepen intimacy, and navigate conflict
-                using EFT and Gottman methods.
-              </p>
-              <span className="link-subtle">Learn more &#8594;</span>
-            </Link>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={relationshipCounseling.src} alt="Couple laughing together at a coffee shop" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>Couples Therapy</h3>
+                <p>
+                  Rebuild communication, deepen intimacy, and navigate conflict
+                  using EFT and Gottman methods.
+                </p>
+                <Link href="/couples-therapy" className="link-subtle">Learn more &#8594;</Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

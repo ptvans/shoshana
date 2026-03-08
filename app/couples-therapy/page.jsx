@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import relationshipCounseling from '../../src/images/relationship-counseling.jpg'
 import LandingFaqSection from '../components/LandingFaqSection'
 import '../components/landing-page.css'
 
@@ -53,8 +54,30 @@ function CouplesTherapy() {
         </div>
       </section>
 
+      {/* Feature Section */}
+      <section className="lp-feature section-alt">
+        <div className="container-narrow">
+          <div className="lp-feature-layout">
+            <div className="lp-feature-image">
+              <img src={relationshipCounseling.src} alt="Couple laughing together at a coffee shop" />
+            </div>
+            <div className="lp-feature-content">
+              <h2>Is your relationship in a rut?</h2>
+              <p>
+                Maybe your sex life has gone stale, you feel like your partner
+                doesn&#39;t understand you or you&#39;re just sick of having the same
+                fight and having it not go anywhere. Maybe you&#39;re struggling
+                with navigating non-monogamy. Let&#39;s work together and figure
+                out how to steady the ship and add intimacy back to your
+                relationship.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Do You Recognize Yourself? */}
-      <section className="lp-recognize section-alt">
+      <section className="lp-recognize">
         <div className="container-narrow">
           <h2>Do You Recognize Yourselves?</h2>
           <ul className="lp-recognize-list">

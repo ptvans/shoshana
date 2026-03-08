@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import shoshanaPortrait from '../src/photos/shoshana/Shoshana-portrait.jpg'
 import shoshanaSitting from '../src/photos/shoshana/Shoshsna-Sitting.jpg'
+import relationshipCounseling from '../src/images/relationship-counseling.jpg'
+import beingTheRock from '../src/images/being-the-rock-for-others.jpg'
+import healingFromTrauma from '../src/images/healing-from-trauma.jpg'
+import highAchieverHiking from '../src/images/high-achiever-hiking.jpg'
+import ocdRumination from '../src/images/OCD-rumination-looking-out-window.jpg'
 import HomeFaqPreview from './components/HomeFaqPreview'
 import './page.css'
 
@@ -91,83 +96,68 @@ function Home() {
             </p>
           </div>
           <div className="focus-areas-grid">
-            <div className="focus-area-card">
-              <div className="focus-area-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2a7 7 0 0 1 7 7c0 3-2 5.5-4 7.5L12 22l-3-5.5C7 14.5 5 12 5 9a7 7 0 0 1 7-7z"/>
-                  <circle cx="12" cy="9" r="2.5"/>
-                </svg>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={healingFromTrauma.src} alt="Misty mountain landscape symbolizing the journey of healing from trauma" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>Trauma &amp; PTSD</h3>
+                <p>
+                  Process difficult experiences with EMDR and trauma-focused
+                  therapy. Find relief without having to relive every detail.
+                </p>
+                <Link href="/trauma-therapy" className="link-subtle">Learn more &#8594;</Link>
               </div>
-              <h3>Trauma &amp; PTSD</h3>
-              <p>
-                Process difficult experiences with EMDR and trauma-focused
-                therapy. Find relief without having to relive every detail.
-              </p>
-              <Link href="/trauma-therapy" className="link-subtle">Learn more &#8594;</Link>
             </div>
 
-            <div className="focus-area-card">
-              <div className="focus-area-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
-                </svg>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={beingTheRock.src} alt="Group of friends laughing together outdoors" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>Dating &amp; Relationships</h3>
+                <p>
+                  Can&#39;t get over an ex, stuck in unhealthy patterns, or recovering
+                  from an abusive relationship? Direct, no-nonsense therapy to break
+                  the cycle.
+                </p>
+                <Link href="/dating-relationship-therapy" className="link-subtle">Learn more &#8594;</Link>
               </div>
-              <h3>Dating &amp; Relationships</h3>
-              <p>
-                Can&#39;t get over an ex, stuck in unhealthy patterns, or recovering
-                from an abusive relationship? Direct, no-nonsense therapy to break
-                the cycle.
-              </p>
-              <Link href="/dating-relationship-therapy" className="link-subtle">Learn more &#8594;</Link>
             </div>
 
-            <div className="focus-area-card">
-              <div className="focus-area-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={highAchieverHiking.src} alt="Woman standing on a mountain summit overlooking a vast landscape" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>High Achievers with Trauma</h3>
+                <p>
+                  Successful on the outside, struggling on the inside. Therapy for
+                  smart, driven people carrying the weight of abuse or growing up
+                  with immature parents.
+                </p>
+                <Link href="/therapy-for-high-achievers" className="link-subtle">Learn more &#8594;</Link>
               </div>
-              <h3>High Achievers with Trauma</h3>
-              <p>
-                Successful on the outside, struggling on the inside. Therapy for
-                smart, driven people carrying the weight of abuse or growing up
-                with immature parents.
-              </p>
-              <Link href="/therapy-for-high-achievers" className="link-subtle">Learn more &#8594;</Link>
             </div>
 
-            <div className="focus-area-card">
-              <div className="focus-area-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M8 12h8M12 8v8"/>
-                </svg>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={ocdRumination.src} alt="Woman looking out a window, reflecting among trees" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>OCD &amp; Intrusive Thoughts</h3>
+                <p>
+                  Rumination and compulsive patterns don&#39;t have to run your life.
+                  Evidence-based treatment using Inference-Based CBT and exposure
+                  therapy.
+                </p>
+                <Link href="/ocd-therapy" className="link-subtle">Learn more &#8594;</Link>
               </div>
-              <h3>OCD &amp; Intrusive Thoughts</h3>
-              <p>
-                Rumination and compulsive patterns don&#39;t have to run your life.
-                Evidence-based treatment using Inference-Based CBT and exposure
-                therapy.
-              </p>
-              <Link href="/ocd-therapy" className="link-subtle">Learn more &#8594;</Link>
             </div>
 
-            <div className="focus-area-card">
-              <div className="focus-area-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
+            <div className="focus-area-card focus-area-card-has-image">
+              <img src={relationshipCounseling.src} alt="Couple laughing together at a coffee shop" className="focus-area-card-image" />
+              <div className="focus-area-card-body">
+                <h3>Couples Therapy</h3>
+                <p>
+                  Rebuild communication, deepen intimacy, and navigate conflict
+                  together using Emotionally Focused Therapy (EFT) and Gottman
+                  methods.
+                </p>
+                <Link href="/couples-therapy" className="link-subtle">Learn more &#8594;</Link>
               </div>
-              <h3>Couples Therapy</h3>
-              <p>
-                Rebuild communication, deepen intimacy, and navigate conflict
-                together using Emotionally Focused Therapy (EFT) and Gottman
-                methods.
-              </p>
-              <Link href="/couples-therapy" className="link-subtle">Learn more &#8594;</Link>
             </div>
           </div>
         </div>

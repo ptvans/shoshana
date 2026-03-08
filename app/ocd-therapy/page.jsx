@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ocdRumination from '../../src/images/OCD-rumination-looking-out-window.jpg'
 import LandingFaqSection from '../components/LandingFaqSection'
 import '../components/landing-page.css'
 
@@ -53,8 +54,29 @@ function OcdTherapy() {
         </div>
       </section>
 
+      {/* Feature Section */}
+      <section className="lp-feature section-alt">
+        <div className="container-narrow">
+          <div className="lp-feature-layout">
+            <div className="lp-feature-image">
+              <img src={ocdRumination.src} alt="Woman looking out a window, reflecting among trees" />
+            </div>
+            <div className="lp-feature-content">
+              <h2>Stuck in your own head?</h2>
+              <p>
+                You know the thoughts don&#39;t make sense, but you can&#39;t stop
+                them. You might spend hours replaying conversations, checking
+                things, or seeking reassurance &#8211; and it&#39;s exhausting. OCD
+                is sneaky, and it thrives on doubt. The good news is that
+                specialized treatment can break the cycle faster than you think.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Do You Recognize Yourself? */}
-      <section className="lp-recognize section-alt">
+      <section className="lp-recognize">
         <div className="container-narrow">
           <h2>Do You Recognize Yourself?</h2>
           <ul className="lp-recognize-list">
