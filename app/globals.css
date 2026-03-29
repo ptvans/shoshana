@@ -6,14 +6,15 @@
 
 :root {
   /* Warm cream/beige palette inspired by reference */
-  --primary-color: #B8977E;      /* Terracotta/tan */
-  --primary-dark: #7f6247;       /* Darker terracotta */
+  --primary-color: #b89275;      /* Terracotta/tan */
+  --primary-dark: #9a7256;       /* Darker terracotta */
+  --primary-darker: #78593b;       /* Darkest terracotta */
   --secondary-color: #D4C4B5;    /* Light tan */
   --accent-color: #E8DFD6;       /* Very light beige */
   --text-primary: #3c3937;       /* Dark gray */
   --text-secondary: #595959;     /* Medium gray — darkened for WCAG 1.4.3 contrast */
   --text-light: #8B8B8B;   
-  --text-dark: #190d03;       /* Light gray */
+  --text-dark: #120902;       /* Light gray */
   --background: #F7F3EF;         /* Warm cream */
   --background-alt: #F0EAE3;     /* Slightly darker cream */
   --background-card: #FAF8F5;    /* Card background */
