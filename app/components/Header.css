@@ -61,13 +61,13 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ffffff;
+  color: #1b0c02;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #1b0c02;
 }
 
 .nav-cta {

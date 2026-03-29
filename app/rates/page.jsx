@@ -28,10 +28,12 @@ function Rates() {
           <div className="rates-grid">
             <div className="rate-item">
               <h3>Rates</h3>
+              <ul>
+                <li>Individual sessions are $240 for a 50-minute session.</li>
+                <li>Couples sessions are $360 for a 50-minute session.</li>
+              </ul>
               <p>
-                Individual sessions are $240 for a 50-minute session.
-                Couples sessions are $360 for a 50-minute session.
-                Please contact me if you have any questions about rates.
+                  Please contact me if you have any questions about rates.
               </p>
             </div>
             <div className="rate-item">
@@ -51,7 +53,7 @@ function Rates() {
             <div className="rate-item">
               <h3>Cancellations</h3>
               <p>
-                Please provide at least 24 hours notice for cancellations to avoid
+                Please provide at least 48 hours notice for cancellations to avoid
                 being charged the full session fee.
               </p>
             </div>

@@ -118,11 +118,6 @@ function Coaching() {
       <section className="coaching-availability">
         <div className="container-narrow">
           <h2>Available Worldwide</h2>
-          <p>
-            Because coaching doesn&#39;t require a therapy license, I&#39;m able to work with
-            clients anywhere in the world. Sessions are conducted via video call at
-            times that work across time zones.
-          </p>
           <div className="availability-note">
             <p>
               <strong>Note:</strong> Coaching is not a substitute for therapy. If you&#39;re

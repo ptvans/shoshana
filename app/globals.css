@@ -12,7 +12,8 @@
   --accent-color: #E8DFD6;       /* Very light beige */
   --text-primary: #3D3D3D;       /* Dark gray */
   --text-secondary: #595959;     /* Medium gray — darkened for WCAG 1.4.3 contrast */
-  --text-light: #8B8B8B;         /* Light gray */
+  --text-light: #8B8B8B;   
+  --text-dark: #190d03;       /* Light gray */
   --background: #F7F3EF;         /* Warm cream */
   --background-alt: #F0EAE3;     /* Slightly darker cream */
   --background-card: #FAF8F5;    /* Card background */
@@ -97,7 +98,7 @@ input, textarea, select {
 .btn-primary {
   display: inline-block;
   background-color: var(--primary-color);
-  color: var(--white);
+  color: var(--text-dark);
   padding: 1rem 2rem;
   border-radius: 0;
   text-decoration: none;
@@ -118,7 +119,7 @@ input, textarea, select {
 .btn-outline {
   display: inline-block;
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--primary-dark);
   padding: 1rem 2rem;
   border: 1px solid var(--primary-color);
   border-radius: 0;

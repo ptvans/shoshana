@@ -96,7 +96,7 @@ function Home() {
             </p>
           </div>
           <div className="focus-areas-grid">
-            <div className="focus-area-card focus-area-card-has-image">
+            <Link href="/trauma-therapy" className="focus-area-card focus-area-card-has-image">
               <img src={healingFromTrauma.src} alt="Misty mountain landscape symbolizing the journey of healing from trauma" className="focus-area-card-image" />
               <div className="focus-area-card-body">
                 <h3>Trauma &amp; PTSD</h3>
@@ -104,11 +104,11 @@ function Home() {
                   Process difficult experiences with EMDR and trauma-focused
                   therapy. Find relief without having to relive every detail.
                 </p>
-                <Link href="/trauma-therapy" className="link-subtle">Learn more &#8594;</Link>
+                <span className="link-subtle">Learn more &#8594;</span>
               </div>
-            </div>
+            </Link>
 
-            <div className="focus-area-card focus-area-card-has-image">
+            <Link href="/dating-relationship-therapy" className="focus-area-card focus-area-card-has-image">
               <img src={beingTheRock.src} alt="Group of friends laughing together outdoors" className="focus-area-card-image" />
               <div className="focus-area-card-body">
                 <h3>Dating &amp; Relationships</h3>
@@ -117,11 +117,11 @@ function Home() {
                   from an abusive relationship? Direct, no-nonsense therapy to break
                   the cycle.
                 </p>
-                <Link href="/dating-relationship-therapy" className="link-subtle">Learn more &#8594;</Link>
+                <span className="link-subtle">Learn more &#8594;</span>
               </div>
-            </div>
+            </Link>
 
-            <div className="focus-area-card focus-area-card-has-image">
+            <Link href="/therapy-for-high-achievers" className="focus-area-card focus-area-card-has-image">
               <img src={highAchieverHiking.src} alt="Woman standing on a mountain summit overlooking a vast landscape" className="focus-area-card-image" />
               <div className="focus-area-card-body">
                 <h3>High Achievers with Trauma</h3>
@@ -130,11 +130,11 @@ function Home() {
                   smart, driven people carrying the weight of abuse or growing up
                   with immature parents.
                 </p>
-                <Link href="/therapy-for-high-achievers" className="link-subtle">Learn more &#8594;</Link>
+                <span className="link-subtle">Learn more &#8594;</span>
               </div>
-            </div>
+            </Link>
 
-            <div className="focus-area-card focus-area-card-has-image">
+            <Link href="/ocd-therapy" className="focus-area-card focus-area-card-has-image">
               <img src={ocdRumination.src} alt="Woman looking out a window, reflecting among trees" className="focus-area-card-image" />
               <div className="focus-area-card-body">
                 <h3>OCD &amp; Intrusive Thoughts</h3>
@@ -143,11 +143,11 @@ function Home() {
                   Evidence-based treatment using Inference-Based CBT and exposure
                   therapy.
                 </p>
-                <Link href="/ocd-therapy" className="link-subtle">Learn more &#8594;</Link>
+                <span className="link-subtle">Learn more &#8594;</span>
               </div>
-            </div>
+            </Link>
 
-            <div className="focus-area-card focus-area-card-has-image">
+            <Link href="/couples-therapy" className="focus-area-card focus-area-card-has-image">
               <img src={relationshipCounseling.src} alt="Couple laughing together at a coffee shop" className="focus-area-card-image" />
               <div className="focus-area-card-body">
                 <h3>Couples Therapy</h3>
@@ -156,9 +156,9 @@ function Home() {
                   together using Emotionally Focused Therapy (EFT) and Gottman
                   methods.
                 </p>
-                <Link href="/couples-therapy" className="link-subtle">Learn more &#8594;</Link>
+                <span className="link-subtle">Learn more &#8594;</span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -212,8 +212,7 @@ function Home() {
               </div>
               <h3>Collaborative Treatment Plan</h3>
               <p>
-                Together, we&#39;ll create a personalized plan with clear goals
-                and evidence-based strategies.
+                Together, we&#39;ll create a personalized plan with evidence-based strategies.
               </p>
             </div>
             <div className="process-step">

@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: 'What is your cancellation policy?',
-    answer: 'Please provide at least 24 hours notice if you need to cancel or reschedule. Late cancellations and missed appointments are charged the full session fee.',
+    answer: 'Please provide at least 48 hours notice if you need to cancel or reschedule. Late cancellations and missed appointments are charged the full session fee.',
   },
   {
     question: 'Is therapy confidential?',
