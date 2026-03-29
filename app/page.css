@@ -4,7 +4,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--primary-color);
+  color: var(--primary-dark);
   margin-bottom: 0.75rem;
 }
 
@@ -379,7 +379,7 @@ a.focus-area-card {
 
 .link-arrow {
   display: inline-block;
-  color: var(--primary-color);
+  color: var(--primary-dark);
   font-weight: 500;
   margin-top: 1rem;
   text-decoration: none;
