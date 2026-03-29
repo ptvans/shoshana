@@ -29,8 +29,8 @@ function Rates() {
             <div className="rate-item">
               <h3>Rates</h3>
               <ul>
-                <li>Individual sessions are $240 for a 50-minute session.</li>
-                <li>Couples sessions are $360 for a 50-minute session.</li>
+                <li>Individual sessions are $240 for a 50-minute session</li>
+                <li>Couples sessions are $240 for a 50-minute session</li>
               </ul>
               <p>
                   Please contact me if you have any questions about rates.
