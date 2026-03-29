@@ -258,7 +258,7 @@ function Home() {
             </div>
             <div className="about-preview-image">
               <div className="about-preview-image-frame">
-                <img src={shoshanaSitting.src} alt="Shoshana Polansky in her therapy office" />
+                <img src={shoshanaPortrait.src} alt="Shoshana Polansky standing outside" />
               </div>
             </div>
           </div>
