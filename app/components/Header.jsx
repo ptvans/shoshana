@@ -32,15 +32,6 @@ function Header() {
           <ul className="nav-links">
             <li>
               <Link
-                href="/"
-                className={`nav-link ${pathname === '/' ? 'active' : ''}`}
-                onClick={handleLinkClick}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/about"
                 className={`nav-link ${pathname === '/about' ? 'active' : ''}`}
                 onClick={handleLinkClick}
